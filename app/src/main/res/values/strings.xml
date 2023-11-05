@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">CollegeTrackingSystem</string>
+
+    <!-- Login-->
+    <string name="login_head">Login</string>
+    <string name="login_here"><u>Login here</u></string>
+    <string name="login_description">Use your Username &amp; Password to login in App.</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="new_account"><u>New Visitor? Register here</u></string>
+    <string name="username">Enter mobile number</string>
+    <string name="password">Enter Password</string>
+
+
+    <!-- Dashboard-->
+    <string name="user_management">user\n Management</string>
+    <string name="bus_management">Bus\n Management</string>
+    <string name="bus_tracking">Bus\n Tracking</string>
+    <string name="route_details">Route\n Details</string>
+    <string name="att_tracking">Attendance\n Tracking</string>
+    <string name="att_confirmation">Attendance\n Confirmation</string>
+    <string name="route_planning">Route\n Planning</string>
+    <string name="emergency_alters">Emergency\n Alerts</string>
+    <string name="analytics">Analytics</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

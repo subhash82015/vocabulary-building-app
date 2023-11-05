@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#0261A0</color>
+    <color name="purple_500">#0261A0</color>
+    <color name="purple_700">#0261A0</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black_lite">#313131</color>
+    <color name="bg_light">#EDEDED</color>
+    <color name="black_ligh1t">#313131</color>
+    <color name="black_ligh12">#727272</color>
+    <color name="black_light">#323232</color>
+    <color name="black_light111">#9A9A9A</color>
+    <color name="bg_color">#131313</color>
+    <color name="red">#CA0303</color>
+    <color name="green">#14CD08</color>
+    <color name="notification_unread_bg">#C1C1C1</color>
+</resources>

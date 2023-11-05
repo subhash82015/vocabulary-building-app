@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "63069669739",
+    "project_id": "tkietwaranafinalyearproject",
+    "storage_bucket": "tkietwaranafinalyearproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63069669739:android:bf97dbc7188ad84e1b642e",
+        "android_client_info": {
+          "package_name": "com.demo.collegeerp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNeWOQiJAFRRu_7QWTailHFEiuPPSEY6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
