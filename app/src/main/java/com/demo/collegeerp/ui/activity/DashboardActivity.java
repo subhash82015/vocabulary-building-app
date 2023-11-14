@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.demo.collegeerp.adapter.DashboardOptionsAdapter;
@@ -21,7 +20,6 @@ import com.demo.collegeerp.utils.SharedPreferenceUtil;
 import com.demo.collegeerp.utils.Tools;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -53,7 +51,7 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
 
 
     private void addAccount() {
-        DocumentReference docRef = firebaseFirestore.collection(Constants.COLLECTION_NAME).document("5555555555"); // Firestore database reference
+        DocumentReference docRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME).document("5555555555"); // Firestore database reference
 
 
         // Create a new user object
@@ -123,6 +121,11 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
             logout();
         } else if (id == Constants.EMERGENCY) {
             Tools.makePhoneCall(DashboardActivity.this);
+        }
+        else if (id == Constants.USER_MANAGEMENT) {
+            Intent intent = new Intent(DashboardActivity.this, UserManagmentActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
     }
 

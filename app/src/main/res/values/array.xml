@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="course">
+        <item>Select Course</item>
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+    </array>
+
+    <array name="branch">
+        <item>Select Branch</item>
+        <item>CSE</item>
+        <item>IT</item>
+        <item>EC</item>
+        <item>EN</item>
+    </array>
+    <array name="section">
+        <item>Select Section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </array>
+
+    <array name="userType">
+        <item>Select User Type</item>
+        <item>Parent</item>
+        <item>Student</item>
+        <item>Driver</item>
+    </array>
+</resources>

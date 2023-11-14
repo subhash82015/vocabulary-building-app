@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void checkUser(String mobile, String password) {
         customProgressDialog.show();
-        CollectionReference usersRef = firebaseFirestore.collection(Constants.COLLECTION_NAME);
+        CollectionReference usersRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME);
         Query query = usersRef.whereEqualTo("mobile", mobile).whereEqualTo("password", password);
         query.get().addOnCompleteListener(task -> {
             customProgressDialog.dismiss();
