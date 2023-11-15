@@ -12,6 +12,7 @@ import com.demo.collegeerp.R;
 import com.demo.collegeerp.databinding.ActivityUserManagmentBinding;
 import com.demo.collegeerp.ui.fragment.AddUserFragment;
 import com.demo.collegeerp.ui.fragment.NotificationFragment;
+import com.demo.collegeerp.ui.fragment.UserListFragment;
 
 public class UserManagmentActivity extends AppCompatActivity {
     ActivityUserManagmentBinding binding;
@@ -26,6 +27,12 @@ public class UserManagmentActivity extends AppCompatActivity {
 
     private void init() {
         handleClickListener();
+        loadInitFragment();
+    }
+
+    private void loadInitFragment() {
+        UserListFragment userListFragment = new UserListFragment();
+        openFragment(userListFragment);
     }
 
     private void handleClickListener() {
@@ -39,7 +46,7 @@ public class UserManagmentActivity extends AppCompatActivity {
         binding.ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               finish();
+                finish();
             }
         });
     }

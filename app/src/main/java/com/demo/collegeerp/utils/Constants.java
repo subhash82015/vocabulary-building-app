@@ -24,7 +24,7 @@ public class Constants {
     public static String ADMIN = "1";
     public static String PARENT = "2";
     public static String STUDENT = "3";
-    public static int DRIVER = 4;
+    public static String DRIVER = "4";
 
     public static String SCREEN_NAME = "screen_name";
     public static String NOTIFICATION = "notification";

@@ -55,7 +55,7 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
 
 
         // Create a new user object
-        AddUsers newUser = new AddUsers("IT", "B.Tech", "James", "5555555555", "12345678", "12345678", "A", 4L, String.valueOf(Constants.DRIVER));
+        AddUsers newUser = new AddUsers("IT", "B.Tech", "James", "5555555555", "12345678", "12345678", "A", 4L, Constants.DRIVER);
 
         // Adding user information to Firestore
         docRef.set(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
