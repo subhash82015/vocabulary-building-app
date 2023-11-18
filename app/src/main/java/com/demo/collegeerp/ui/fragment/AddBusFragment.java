@@ -53,7 +53,7 @@ public class AddBusFragment extends Fragment {
     List<Long> driverListId = new ArrayList<>();
     Long driverId = 0L, bus_id;
 
-    String busNumber = "", sourceLat = "", sourceLon = "", destinationLat = "", destinationLon = "",driver_name="";
+    String busNumber = "", sourceLat = "", sourceLon = "", destinationLat = "", destinationLon = "", driver_name = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -229,7 +229,7 @@ public class AddBusFragment extends Fragment {
     private void addBusAccount() {
         DocumentReference docRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME).document(busNumber); // Firestore database reference
         // Create a new user object
-        AddBus addBus = new AddBus(bus_id, busNumber, destinationLon, destinationLat, String.valueOf(driverId), sourceLon, sourceLat,driver_name);
+        AddBus addBus = new AddBus(bus_id, busNumber, destinationLon, destinationLat, String.valueOf(driverId), sourceLon, sourceLat, driver_name, sourceLat, sourceLon);
 
         // Adding user information to Firestore
         docRef.set(addBus).addOnSuccessListener(new OnSuccessListener<Void>() {
