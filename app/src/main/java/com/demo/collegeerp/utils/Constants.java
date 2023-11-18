@@ -44,4 +44,6 @@ public class Constants {
     public static String ACCOUNT_COLLECTION_NAME = "accounts";
 
     public static String NOTIFICATION_COLLECTION_NAME = "notifications";
+
+    public static String BUS_ACCOUNT_COLLECTION_NAME = "bus_accounts";
 }
