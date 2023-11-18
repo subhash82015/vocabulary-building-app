@@ -84,8 +84,6 @@ public class UserListFragment extends Fragment implements OnItemClickListener {
                             setAdapter();
                         }
                     }
-
-
                 })
                 .addOnFailureListener(e -> {
                     customProgressDialog.dismiss();

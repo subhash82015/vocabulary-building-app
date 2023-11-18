@@ -49,8 +49,12 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.ViewHo
         } else if (list.get(position).getUsertype().equals(Constants.DRIVER)) {
             binding.tvUserType.setText("Driver");
         }
-
-        binding.tvCourseDetails.setText(list.get(position).getCourse() + "-" + list.get(position).getBranch() + "(" + list.get(position).getSection() + ")");
+        if (list.get(position).getUsertype().equals("3")) {
+            binding.tvCourseDetails.setText(list.get(position).getCourse() + "-" + list.get(position).getBranch() + "(" + list.get(position).getSection() + ")");
+            binding.tvCourseDetails.setVisibility(View.VISIBLE);
+        } else {
+            binding.tvCourseDetails.setVisibility(View.GONE);
+        }
         binding.tvMobile.setText(list.get(position).getMobile() != null ? list.get(position).getMobile() : "");
 
         binding.ivDelete.setOnClickListener(new View.OnClickListener() {

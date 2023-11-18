@@ -34,7 +34,7 @@ public class AddUserFragment extends Fragment {
 
     private String TAG = "AddUserFragment";
     FragmentAddUserBinding binding;
-    private String name = "", mobile = "", course = "", branch = "", section = "", password = "", usertype = "", rollNo = "";
+    private String name = "", mobile = "", course = "", branch = "", section = "", password = "", usertype = "", rollNo = "", feesAmount;
     Long userid = 0L;
     private FirebaseFirestore firebaseFirestore;
 
@@ -66,6 +66,7 @@ public class AddUserFragment extends Fragment {
                 mobile = binding.etMobile.getText().toString();
                 password = binding.etPassword.getText().toString();
                 rollNo = binding.etRollNo.getText().toString();
+                feesAmount = binding.etFeesAmount.getText().toString();
                 course = binding.spCourse.getSelectedItem().toString();
                 branch = binding.spBranch.getSelectedItem().toString();
                 section = binding.spSection.getSelectedItem().toString();
@@ -96,11 +97,11 @@ public class AddUserFragment extends Fragment {
     private void checkValidation() {
         if (name.equals("")) {
             Tools.showToast(requireActivity(), "Please enter name");
-        } else if (course.equals("")) {
+        } else if (course.equals("") && usertype.equals("3")) {
             Tools.showToast(requireActivity(), "Select Course");
-        } else if (branch.equals("")) {
+        } else if (branch.equals("") && usertype.equals("3")) {
             Tools.showToast(requireActivity(), "Select Branch");
-        } else if (section.equals("")) {
+        } else if (section.equals("") && usertype.equals("3")) {
             Tools.showToast(requireActivity(), "Select Section");
         } else if (usertype.equals("")) {
             Tools.showToast(requireActivity(), "Select User Type");
@@ -177,7 +178,7 @@ public class AddUserFragment extends Fragment {
     private void addAccount() {
         DocumentReference docRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME).document(mobile); // Firestore database reference
         // Create a new user object
-        AddUsers newUser = new AddUsers(branch, course, name, mobile, rollNo, rollNo, section, userid, usertype);
+        AddUsers newUser = new AddUsers(branch, course, name, mobile, rollNo, rollNo, section, userid, usertype, feesAmount);
 
         // Adding user information to Firestore
         docRef.set(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {

@@ -12,12 +12,13 @@ public class AddUsers {
     private Long userid;
     // Add other properties as needed
     private String usertype;
+    private String fees_amount;
 
     public AddUsers() {
         // Default constructor required for Firestore
     }
 
-    public AddUsers(String branch, String course, String full_name, String mobile, String password, String roll_no, String section, Long userid, String usertype) {
+    public AddUsers(String branch, String course, String full_name, String mobile, String password, String roll_no, String section, Long userid, String usertype, String fees_amount) {
         this.branch = branch;
         this.course = course;
         this.full_name = full_name;
@@ -27,6 +28,7 @@ public class AddUsers {
         this.section = section;
         this.userid = userid;
         this.usertype = usertype;
+        this.fees_amount = fees_amount;
         // Assign other properties
     }
 
@@ -101,5 +103,13 @@ public class AddUsers {
 
     public void setUsertype(String usertype) {
         this.usertype = usertype;
+    }
+
+    public String getFees_amount() {
+        return fees_amount;
+    }
+
+    public void setFees_amount(String fees_amount) {
+        this.fees_amount = fees_amount;
     }
 }

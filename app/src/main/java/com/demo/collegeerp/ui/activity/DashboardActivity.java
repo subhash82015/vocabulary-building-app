@@ -46,34 +46,6 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
         loadServicesOptions();
         handleClickListener();
         setDataOnViews();
-        // addAccount();
-    }
-
-
-    private void addAccount() {
-        DocumentReference docRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME).document("5555555555"); // Firestore database reference
-
-
-        // Create a new user object
-        AddUsers newUser = new AddUsers("IT", "B.Tech", "James", "5555555555", "12345678", "12345678", "A", 4L, Constants.DRIVER);
-
-        // Adding user information to Firestore
-        docRef.set(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                // User information added successfully
-                Tools.logs(TAG, "User information added successfully");
-                Tools.showToast(DashboardActivity.this, "User information added successfully");
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                // Handle any errors that may occur
-                Tools.logs(TAG, "Error adding user information" + e);
-                Tools.showToast(DashboardActivity.this, "Error adding user information" + e);
-
-            }
-        });
     }
 
 
@@ -124,6 +96,11 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
         }
         else if (id == Constants.USER_MANAGEMENT) {
             Intent intent = new Intent(DashboardActivity.this, UserManagmentActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        }
+        else if (id == Constants.BUS_MANAGEMENT) {
+            Intent intent = new Intent(DashboardActivity.this, BusManagementActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }

@@ -10,13 +10,14 @@ public class UsersResponse {
     private String full_name;
     private String course;
     private String usertype;
+    private String fees_amount;
 
 
     public UsersResponse() {
         // Required empty constructor for Firestore
     }
 
-    public UsersResponse(Long userid, String branch, String section, String roll_no, String password, String mobile, String full_name, String course, String usertype) {
+    public UsersResponse(Long userid, String branch, String section, String roll_no, String password, String mobile, String full_name, String course, String usertype, String fees_amount) {
         this.userid = userid;
         this.branch = branch;
         this.section = section;
@@ -26,6 +27,7 @@ public class UsersResponse {
         this.full_name = full_name;
         this.course = course;
         this.usertype = usertype;
+        this.fees_amount = fees_amount;
     }
 
     public Long getUserid() {
@@ -99,5 +101,13 @@ public class UsersResponse {
 
     public void setUsertype(String usertype) {
         this.usertype = usertype;
+    }
+
+    public String getFees_amount() {
+        return fees_amount;
+    }
+
+    public void setFees_amount(String fees_amount) {
+        this.fees_amount = fees_amount;
     }
 }
