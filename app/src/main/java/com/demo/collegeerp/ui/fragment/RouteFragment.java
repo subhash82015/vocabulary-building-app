@@ -14,17 +14,22 @@ import com.demo.collegeerp.R;
 import com.demo.collegeerp.databinding.FragmentAddUserBinding;
 import com.demo.collegeerp.databinding.FragmentRouteBinding;
 import com.demo.collegeerp.models.BusesResponse;
+import com.demo.collegeerp.ui.activity.LoginActivity;
 import com.demo.collegeerp.utils.Constants;
 import com.demo.collegeerp.utils.CustomProgressDialog;
 import com.demo.collegeerp.utils.FirebaseRepo;
 import com.demo.collegeerp.utils.LocationHelper;
+import com.demo.collegeerp.utils.SharedPreferenceUtil;
 import com.demo.collegeerp.utils.Tools;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 public class RouteFragment extends Fragment {
@@ -45,6 +50,7 @@ public class RouteFragment extends Fragment {
 
     private String bus_number = "", bus_id = "", driver_name = "";
 
+    private SharedPreferenceUtil sharedPreferenceUtil;
 
     public RouteFragment() {
         // Required empty public constructor
@@ -68,9 +74,127 @@ public class RouteFragment extends Fragment {
 
     private void init() {
         firebaseFirestore = FirebaseRepo.createInstance();
+        sharedPreferenceUtil = SharedPreferenceUtil.getInstance(requireActivity());
         customProgressDialog = new CustomProgressDialog(requireActivity(), "Please wait....");
         getBusList();
+        handleVisibility();
     }
+
+    private void handleVisibility() {
+        if (!sharedPreferenceUtil.getUserDetails(Constants.USER_TYPE).equals(Constants.ADMIN)) {
+            binding.spBuses.setVisibility(View.GONE);
+            getUserInfo();
+        } else {
+            binding.spBuses.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+    public void getUserInfo() {
+        customProgressDialog.show();
+        CollectionReference usersRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME);
+        Query query = usersRef.whereEqualTo("userid", sharedPreferenceUtil.getUserId());
+        query.get().addOnCompleteListener(task -> {
+            customProgressDialog.dismiss();
+            if (task.isSuccessful()) {
+                QuerySnapshot querySnapshot = task.getResult();
+                if (querySnapshot != null && !querySnapshot.isEmpty()) {
+                    for (QueryDocumentSnapshot document : querySnapshot) {
+                        getUserInfo(document);
+                    }
+                } else {
+                    Tools.showToast(requireActivity(), "No user found with provided Mobile and password");
+                }
+            } else {
+                Tools.logs(TAG, "Error " + task.getException());
+            }
+        });
+    }
+
+    private void getUserInfo(QueryDocumentSnapshot document) {
+        Tools.showToast(requireActivity(), "Login Success");
+        Tools.logs(TAG, "User Details  " + document.getData());
+        Map<String, Object> documentData = document.getData();
+        if (documentData != null) {
+            if (sharedPreferenceUtil.getUserDetails(Constants.USER_TYPE).equals(Constants.DRIVER)) {
+                final Long userid = (Long) documentData.get("userid");
+                getBusInfoByDriverId(String.valueOf(userid));
+            } else if (sharedPreferenceUtil.getUserDetails(Constants.USER_TYPE).equals(Constants.STUDENT)) {
+                final String busId = (String) documentData.get("bus_id");
+                getBusInfo(busId);
+            } else if (sharedPreferenceUtil.getUserDetails(Constants.USER_TYPE).equals(Constants.PARENT)) {
+                final String busId = (String) documentData.get("bus_id");
+                getBusInfo(busId);
+            }
+
+        }
+    }
+
+    public void getBusInfo(String busId) {
+        customProgressDialog.show();
+        CollectionReference usersRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME);
+        Query query = usersRef.whereEqualTo("id", Long.parseLong(busId));
+        query.get().addOnCompleteListener(task -> {
+            customProgressDialog.dismiss();
+            if (task.isSuccessful()) {
+                QuerySnapshot querySnapshot = task.getResult();
+                if (querySnapshot != null && !querySnapshot.isEmpty()) {
+                    for (QueryDocumentSnapshot document : querySnapshot) {
+                        getBusInfoDetails(document);
+                    }
+                } else {
+                    Tools.showToast(requireActivity(), "No user found with provided Mobile and password");
+                }
+            } else {
+                Tools.logs(TAG, "Error " + task.getException());
+            }
+        });
+    }
+
+    public void getBusInfoByDriverId(String userid) {
+        customProgressDialog.show();
+        CollectionReference usersRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME);
+        Query query = usersRef.whereEqualTo("driver_id", userid);
+        query.get().addOnCompleteListener(task -> {
+            customProgressDialog.dismiss();
+            if (task.isSuccessful()) {
+                QuerySnapshot querySnapshot = task.getResult();
+                if (querySnapshot != null && !querySnapshot.isEmpty()) {
+                    for (QueryDocumentSnapshot document : querySnapshot) {
+                        getBusInfoDetails(document);
+                    }
+                } else {
+                    Tools.showToast(requireActivity(), "No user found with provided Mobile and password");
+                }
+            } else {
+                Tools.logs(TAG, "Error " + task.getException());
+            }
+        });
+    }
+
+
+    private void getBusInfoDetails(QueryDocumentSnapshot document) {
+        // Tools.showToast(requireActivity(), "Login Success");
+        Tools.logs(TAG, "Bus Details  " + document.getData());
+        Map<String, Object> documentData = document.getData();
+        if (documentData != null) {
+            final String driver_name = (String) documentData.get("driver_name");
+            final String bus_number = (String) documentData.get("bus_number");
+            final String source_lan = (String) documentData.get("source_lan");
+            final String source_lat = (String) documentData.get("source_lat");
+            final String destination_lan = (String) documentData.get("destination_lan");
+            final String destination_lat = (String) documentData.get("destination_lat");
+            final String last_lan = (String) documentData.get("last_lan");
+            final String last_lat = (String) documentData.get("last_lat");
+            binding.tvDriverName.setText(driver_name);
+            binding.tvBusNumber.setText(bus_number);
+            binding.tvSourceAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(source_lat), Double.parseDouble(source_lan)));
+            binding.tvDestinationAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(destination_lat), Double.parseDouble(destination_lan)));
+            binding.tvLastAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(last_lat), Double.parseDouble(last_lan)));
+
+        }
+    }
+
 
     private void getBusList() {
         // modelList.clear();
