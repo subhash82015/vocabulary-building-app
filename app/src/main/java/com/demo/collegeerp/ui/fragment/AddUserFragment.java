@@ -8,8 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
 import com.demo.collegeerp.databinding.FragmentAddUserBinding;
+import com.demo.collegeerp.models.BusesResponse;
+import com.demo.collegeerp.models.UsersResponse;
 import com.demo.collegeerp.models.post.AddUsers;
 import com.demo.collegeerp.utils.Constants;
 import com.demo.collegeerp.utils.CustomProgressDialog;
@@ -26,6 +30,8 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 
@@ -34,9 +40,13 @@ public class AddUserFragment extends Fragment {
 
     private String TAG = "AddUserFragment";
     FragmentAddUserBinding binding;
-    private String name = "", mobile = "", course = "", branch = "", section = "", password = "", usertype = "", rollNo = "", feesAmount;
+    private String name = "", mobile = "", course = "", branch = "", section = "", password = "", usertype = "", rollNo = "", feesAmount = "", bus_number = "", bus_id = "";
     Long userid = 0L;
     private FirebaseFirestore firebaseFirestore;
+
+    List<BusesResponse> modelList = new ArrayList<>();
+    List<String> busNumberListName = new ArrayList<>();
+    List<Long> busListId = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -56,7 +66,67 @@ public class AddUserFragment extends Fragment {
         firebaseFirestore = FirebaseRepo.createInstance();
         customProgressDialog = new CustomProgressDialog(requireActivity(), "Please wait....");
         handleClickListener();
+        getBusList();
     }
+
+    private void getBusList() {
+        // modelList.clear();
+        customProgressDialog.show();
+        CollectionReference collectionRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME); // Replace with your collection name
+
+        collectionRef.get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                        customProgressDialog.dismiss();
+                        if (documentSnapshot.exists()) {
+                            BusesResponse model = documentSnapshot.toObject(BusesResponse.class);
+                            modelList.add(model);
+                        }
+                    }
+                    setSpinnerData();
+                })
+                .addOnFailureListener(e -> {
+                    customProgressDialog.dismiss();
+                    // Handle any errors that occur while fetching documents
+                    Tools.logs(TAG, "Error getting documents: " + e);
+                });
+
+
+    }
+
+    private void setOnItemSelectedListener() {
+        binding.spBuses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                bus_id = String.valueOf(busListId.get(i));
+                bus_number = busNumberListName.get(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+
+
+    private void setSpinnerData() {
+        for (int i = 0; i < modelList.size(); i++) {
+            busNumberListName.add(modelList.get(i).getBus_number());
+            busListId.add(modelList.get(i).getId());
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item, busNumberListName);
+
+        // Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        binding.spBuses.setAdapter(adapter);
+        setOnItemSelectedListener();
+
+    }
+
 
     private void handleClickListener() {
         binding.btnAddUser.setOnClickListener(new View.OnClickListener() {
@@ -178,7 +248,7 @@ public class AddUserFragment extends Fragment {
     private void addAccount() {
         DocumentReference docRef = firebaseFirestore.collection(Constants.ACCOUNT_COLLECTION_NAME).document(mobile); // Firestore database reference
         // Create a new user object
-        AddUsers newUser = new AddUsers(branch, course, name, mobile, rollNo, rollNo, section, userid, usertype, feesAmount);
+        AddUsers newUser = new AddUsers(branch, course, name, mobile, rollNo, rollNo, section, userid, usertype, feesAmount, bus_number, bus_id);
 
         // Adding user information to Firestore
         docRef.set(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {

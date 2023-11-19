@@ -263,6 +263,37 @@
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
+                            <Spinner
+                                android:id="@+id/spBuses"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_2ssp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@color/black_light"
+                                android:textColorHint="@color/black_light" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5ssp"
+                        android:layout_marginTop="@dimen/_22ssp"
+                        android:layout_marginEnd="@dimen/_5ssp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_login"
+                            android:orientation="horizontal">
+
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/etMobile"
                                 android:layout_width="match_parent"
