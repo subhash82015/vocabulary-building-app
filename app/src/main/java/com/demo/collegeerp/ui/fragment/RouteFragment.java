@@ -17,6 +17,7 @@ import com.demo.collegeerp.models.BusesResponse;
 import com.demo.collegeerp.utils.Constants;
 import com.demo.collegeerp.utils.CustomProgressDialog;
 import com.demo.collegeerp.utils.FirebaseRepo;
+import com.demo.collegeerp.utils.LocationHelper;
 import com.demo.collegeerp.utils.Tools;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -40,7 +41,9 @@ public class RouteFragment extends Fragment {
     List<String> busNumberListName = new ArrayList<>();
     List<Long> busListId = new ArrayList<>();
 
-    private String bus_number = "", bus_id = "";
+    BusesResponse busesResponse;
+
+    private String bus_number = "", bus_id = "", driver_name = "";
 
 
     public RouteFragment() {
@@ -93,6 +96,7 @@ public class RouteFragment extends Fragment {
 
 
     }
+
     private void setSpinnerData() {
         for (int i = 0; i < modelList.size(); i++) {
             busNumberListName.add(modelList.get(i).getBus_number());
@@ -117,6 +121,8 @@ public class RouteFragment extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 bus_id = String.valueOf(busListId.get(i));
                 bus_number = busNumberListName.get(i);
+                busesResponse = modelList.get(i);
+                setBusData();
             }
 
             @Override
@@ -124,5 +130,13 @@ public class RouteFragment extends Fragment {
 
             }
         });
+    }
+
+    private void setBusData() {
+        binding.tvDriverName.setText(busesResponse.getDriver_name());
+        binding.tvBusNumber.setText(busesResponse.getBus_number());
+        binding.tvSourceAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getSource_lat()), Double.parseDouble(busesResponse.getSource_lan())));
+        binding.tvDestinationAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getDestination_lat()), Double.parseDouble(busesResponse.getDestination_lan())));
+        binding.tvLastAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getLast_lat()), Double.parseDouble(busesResponse.getLast_lan())));
     }
 }

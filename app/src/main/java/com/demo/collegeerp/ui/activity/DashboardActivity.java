@@ -152,9 +152,9 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
         DocumentReference docRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME).document(bus_number);
 
         Map<String, Object> updates = new HashMap<>();
-        updates.put("last_lan", lastLongitude);
+        updates.put("last_lan", String.valueOf(lastLongitude));
 
-        updates.put("last_lat", lastLatitude);
+        updates.put("last_lat", String.valueOf(lastLatitude));
 
         docRef.update(updates)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {

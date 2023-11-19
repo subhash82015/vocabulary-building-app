@@ -12,12 +12,14 @@ public class BusesResponse {
     private String driver_name;
     private String source_lan;
     private String source_lat;
+    private String last_lan;
+    private String last_lat;
 
     public BusesResponse() {
         // Default constructor required for Firestore
     }
 
-    public BusesResponse(Long id, String bus_number, String destination_lan, String destination_lat, String driver_id, String source_lan, String source_lat, String driver_name) {
+    public BusesResponse(Long id, String bus_number, String destination_lan, String destination_lat, String driver_id, String source_lan, String source_lat, String driver_name, String last_lan, String last_lat) {
         this.id = id;
         this.bus_number = bus_number;
         this.destination_lan = destination_lan;
@@ -26,6 +28,8 @@ public class BusesResponse {
         this.source_lan = source_lan;
         this.source_lat = source_lat;
         this.driver_name = driver_name;
+        this.last_lan = last_lan;
+        this.last_lat = last_lat;
         // Assign other properties
     }
 
@@ -93,5 +97,21 @@ public class BusesResponse {
 
     public void setDriver_name(String driver_name) {
         this.driver_name = driver_name;
+    }
+
+    public String getLast_lan() {
+        return last_lan;
+    }
+
+    public void setLast_lan(String last_lan) {
+        this.last_lan = last_lan;
+    }
+
+    public String getLast_lat() {
+        return last_lat;
+    }
+
+    public void setLast_lat(String last_lat) {
+        this.last_lat = last_lat;
     }
 }
