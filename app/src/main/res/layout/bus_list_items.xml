@@ -85,6 +85,7 @@
                     android:layout_height="@dimen/_24sdp"
                     android:layout_alignParentEnd="true"
                     android:src="@drawable/baseline_delete_24"
+                    android:visibility="gone"
                     app:tint="@color/red" />
 
             </RelativeLayout>

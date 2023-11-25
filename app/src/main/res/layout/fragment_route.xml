@@ -48,14 +48,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_10sdp"
             app:cardBackgroundColor="@color/white"
-            app:cardElevation="@dimen/_10sdp"
-            >
+            app:cardElevation="@dimen/_10sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -213,8 +212,17 @@
             </LinearLayout>
 
 
-
         </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="View Map"
+            android:textColor="@color/white"
+
+            />
 
 
     </LinearLayout>

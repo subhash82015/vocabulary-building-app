@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,7 +14,7 @@ import com.demo.collegeerp.ui.fragment.AddUserFragment;
 import com.demo.collegeerp.ui.fragment.RouteFragment;
 import com.demo.collegeerp.ui.fragment.UserListFragment;
 
-public class RouteActivity extends AppCompatActivity {
+public class RouteActivity extends AppCompatActivity  implements RouteFragment.OnDataPassedListener {
     ActivityRouteBinding binding;
 
     @Override
@@ -47,5 +48,20 @@ public class RouteActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.commonFrameLayout, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void onDataPassed(Bundle data) {
+       String lat_s = data.getString("lat_s");
+        String lan_s = data.getString("lan_s");
+        String lan_l = data.getString("lan_l");
+        String lat_l = data.getString("lat_l");
+
+        Intent intent = new Intent(RouteActivity.this, MapActivity.class);
+        intent.putExtra("lat_s", lat_s);
+        intent.putExtra("lan_s", lan_s);
+        intent.putExtra("lan_l", lan_l);
+        intent.putExtra("lat_l", lat_l);
+        startActivity(intent);
     }
 }

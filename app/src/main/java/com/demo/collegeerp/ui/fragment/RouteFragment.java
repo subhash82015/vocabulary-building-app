@@ -1,7 +1,10 @@
 package com.demo.collegeerp.ui.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,6 +18,7 @@ import com.demo.collegeerp.databinding.FragmentAddUserBinding;
 import com.demo.collegeerp.databinding.FragmentRouteBinding;
 import com.demo.collegeerp.models.BusesResponse;
 import com.demo.collegeerp.ui.activity.LoginActivity;
+import com.demo.collegeerp.ui.activity.MapActivity;
 import com.demo.collegeerp.utils.Constants;
 import com.demo.collegeerp.utils.CustomProgressDialog;
 import com.demo.collegeerp.utils.FirebaseRepo;
@@ -52,6 +56,9 @@ public class RouteFragment extends Fragment {
 
     private SharedPreferenceUtil sharedPreferenceUtil;
 
+    String source_lan, source_lat, destination_lan, destination_lat, last_lan, last_lat;
+    private OnDataPassedListener dataPassedListener;
+
     public RouteFragment() {
         // Required empty public constructor
     }
@@ -73,11 +80,35 @@ public class RouteFragment extends Fragment {
     }
 
     private void init() {
+        //dataPassedListener = (OnDataPassedListener) this;
+
         firebaseFirestore = FirebaseRepo.createInstance();
         sharedPreferenceUtil = SharedPreferenceUtil.getInstance(requireActivity());
         customProgressDialog = new CustomProgressDialog(requireActivity(), "Please wait....");
         getBusList();
+        handleClickListener();
         handleVisibility();
+    }
+
+    private void handleClickListener() {
+        binding.btnViewMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Bundle data = new Bundle();
+                data.putString("lat_s", source_lat);
+
+                data.putString("lat_s", source_lat);
+                data.putString("lan_s", source_lan);
+                data.putString("lan_l", last_lan);
+                data.putString("lat_l", last_lat);
+
+                if (dataPassedListener != null) {
+                    dataPassedListener.onDataPassed(data);
+                }
+
+            }
+        });
     }
 
     private void handleVisibility() {
@@ -262,5 +293,29 @@ public class RouteFragment extends Fragment {
         binding.tvSourceAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getSource_lat()), Double.parseDouble(busesResponse.getSource_lan())));
         binding.tvDestinationAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getDestination_lat()), Double.parseDouble(busesResponse.getDestination_lan())));
         binding.tvLastAddress.setText(LocationHelper.getAddressFromLatLng(requireActivity(), Double.parseDouble(busesResponse.getLast_lat()), Double.parseDouble(busesResponse.getLast_lan())));
+
+
+        source_lan = busesResponse.getSource_lan();
+        source_lat = busesResponse.getSource_lat();
+        destination_lan = busesResponse.getDestination_lan();
+        destination_lat = busesResponse.getDestination_lat();
+        last_lan = busesResponse.getLast_lan();
+        last_lat = busesResponse.getLast_lat();
+
+    }
+
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            dataPassedListener = (OnDataPassedListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement OnDataPassedListener");
+        }
+    }
+
+    public interface OnDataPassedListener {
+        void onDataPassed(Bundle data);
     }
 }
