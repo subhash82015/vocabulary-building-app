@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".ui.fragment.AddBusFragment">
 
@@ -13,11 +13,11 @@
 
 
         <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_15sdp"
-            android:layout_marginRight="@dimen/_15sdp">
+            android:layout_marginRight="@dimen/_15sdp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,7 +88,6 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -134,8 +133,8 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
@@ -155,8 +154,8 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="1"
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
@@ -172,7 +171,6 @@
                                 android:textColor="@color/black_light"
                                 android:textColorHint="@color/black_light" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -191,8 +189,8 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
@@ -212,8 +210,8 @@
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="1"
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
@@ -231,9 +229,14 @@
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
+
+                   <!-- <fragment
+                        android:id="@+id/autocompleteFragment"
+                        android:layout_width="match_parent"
+                        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                        android:layout_height="wrap_content" />-->
 
 
                     <androidx.appcompat.widget.AppCompatButton

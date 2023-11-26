@@ -1,10 +1,13 @@
 package com.demo.collegeerp.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,19 +15,25 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import com.demo.collegeerp.R;
-import com.demo.collegeerp.adapter.UserListAdapter;
 import com.demo.collegeerp.databinding.FragmentAddBusBinding;
 import com.demo.collegeerp.models.UsersResponse;
 import com.demo.collegeerp.models.post.AddBus;
-import com.demo.collegeerp.models.post.AddUsers;
 import com.demo.collegeerp.utils.Constants;
+import com.demo.collegeerp.utils.CustomPlacesDialog;
 import com.demo.collegeerp.utils.CustomProgressDialog;
 import com.demo.collegeerp.utils.FirebaseRepo;
 import com.demo.collegeerp.utils.Tools;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
+import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -32,7 +41,9 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -76,6 +87,49 @@ public class AddBusFragment extends Fragment {
         handleClickListener();
         getUserList();
     }
+
+    public void openGooglePlacesSearch() {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        CustomPlacesDialog customDialog = new CustomPlacesDialog(requireContext(), "Your message", fragmentManager);
+        customDialog.show();
+    }
+
+   /* public void openGooglePlacesSearch1() {
+
+        Places.initialize(requireActivity(), "AIzaSyApIEvt80CbiC2R6IcGOVqEzyNYw6mlxjg"); // Initialize with your API key
+// Set up an autocomplete fragment
+
+        AutocompleteSupportFragment autocompleteFragment =
+                (AutocompleteSupportFragment) getChildFragmentManager().findFragmentByTag("autocompleteFragment");
+
+        if (autocompleteFragment == null) {
+            autocompleteFragment = new AutocompleteSupportFragment();
+            getChildFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.autocompleteFragment, autocompleteFragment, "autocompleteFragment")
+                    .commit();
+        }
+
+
+// Specify the fields to return
+        autocompleteFragment.setPlaceFields(Arrays.asList(Place.Field.ID, Place.Field.NAME));
+
+// Set up a PlaceSelectionListener to handle the selected place
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
+            @Override
+            public void onPlaceSelected(@NonNull Place place) {
+                // Handle the selected place
+                Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
+            }
+
+            @Override
+            public void onError(@NonNull Status status) {
+                // Handle error
+                Log.i(TAG, "An error occurred: " + status);
+            }
+        });
+
+    }*/
 
     private void getUserList() {
         // modelList.clear();
