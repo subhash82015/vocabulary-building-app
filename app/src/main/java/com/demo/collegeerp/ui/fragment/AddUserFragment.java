@@ -46,6 +46,7 @@ public class AddUserFragment extends Fragment {
 
     List<BusesResponse> modelList = new ArrayList<>();
     List<String> busNumberListName = new ArrayList<>();
+    List<String> userTypeList = new ArrayList<>();
     List<Long> busListId = new ArrayList<>();
 
     @Override
@@ -66,6 +67,7 @@ public class AddUserFragment extends Fragment {
         firebaseFirestore = FirebaseRepo.createInstance();
         customProgressDialog = new CustomProgressDialog(requireActivity(), "Please wait....");
         handleClickListener();
+        setOnItemSelectedListenerUserType();
         getBusList();
     }
 
@@ -74,22 +76,20 @@ public class AddUserFragment extends Fragment {
         customProgressDialog.show();
         CollectionReference collectionRef = firebaseFirestore.collection(Constants.BUS_ACCOUNT_COLLECTION_NAME); // Replace with your collection name
 
-        collectionRef.get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                        customProgressDialog.dismiss();
-                        if (documentSnapshot.exists()) {
-                            BusesResponse model = documentSnapshot.toObject(BusesResponse.class);
-                            modelList.add(model);
-                        }
-                    }
-                    setSpinnerData();
-                })
-                .addOnFailureListener(e -> {
-                    customProgressDialog.dismiss();
-                    // Handle any errors that occur while fetching documents
-                    Tools.logs(TAG, "Error getting documents: " + e);
-                });
+        collectionRef.get().addOnSuccessListener(queryDocumentSnapshots -> {
+            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                customProgressDialog.dismiss();
+                if (documentSnapshot.exists()) {
+                    BusesResponse model = documentSnapshot.toObject(BusesResponse.class);
+                    modelList.add(model);
+                }
+            }
+            setSpinnerData();
+        }).addOnFailureListener(e -> {
+            customProgressDialog.dismiss();
+            // Handle any errors that occur while fetching documents
+            Tools.logs(TAG, "Error getting documents: " + e);
+        });
 
 
     }
@@ -100,6 +100,33 @@ public class AddUserFragment extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 bus_id = String.valueOf(busListId.get(i));
                 bus_number = busNumberListName.get(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+
+
+    private void setOnItemSelectedListenerUserType() {
+
+        binding.spUserType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                final String usertype = binding.spUserType.getSelectedItem().toString();
+
+                switch (usertype) {
+                    case "Select User Type":
+                    case "Student":
+                        studentVisibility();
+                        break;
+                    case "Parent":
+                    case "Driver":
+                        handleOthersVisibility();
+                        break;
+                }
             }
 
             @Override
@@ -154,15 +181,35 @@ public class AddUserFragment extends Fragment {
                     usertype = "";
                 } else if (usertype.equals("Parent")) {
                     usertype = "2";
+                    handleOthersVisibility();
                 } else if (usertype.equals("Student")) {
                     usertype = "3";
+                    studentVisibility();
                 } else if (usertype.equals("Driver")) {
                     usertype = "4";
+                    handleOthersVisibility();
                 }
                 checkValidation();
             }
         });
     }
+
+    private void studentVisibility() {
+        binding.llBus.setVisibility(View.VISIBLE);
+        binding.llFeesAmount.setVisibility(View.VISIBLE);
+        binding.llSection.setVisibility(View.VISIBLE);
+        binding.llBranch.setVisibility(View.VISIBLE);
+        binding.llCourse.setVisibility(View.VISIBLE);
+    }
+
+    private void handleOthersVisibility() {
+        binding.llBus.setVisibility(View.GONE);
+        binding.llFeesAmount.setVisibility(View.GONE);
+        binding.llSection.setVisibility(View.GONE);
+        binding.llBranch.setVisibility(View.GONE);
+        binding.llCourse.setVisibility(View.GONE);
+    }
+
 
     private void checkValidation() {
         if (name.equals("")) {

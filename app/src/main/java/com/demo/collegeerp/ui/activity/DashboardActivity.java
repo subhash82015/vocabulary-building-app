@@ -259,7 +259,7 @@ public class DashboardActivity extends AppCompatActivity implements OnItemClickL
             Intent intent = new Intent(DashboardActivity.this, BusManagementActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-        } else if (id == Constants.ROUTE_PLANNING || id == Constants.ROUTE_DETAILS|| id == Constants.BUS_TRACKING) {
+        } else if (id == Constants.ROUTE_PLANNING || id == Constants.ROUTE_DETAILS || id == Constants.BUS_TRACKING) {
             Intent intent = new Intent(DashboardActivity.this, RouteActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);

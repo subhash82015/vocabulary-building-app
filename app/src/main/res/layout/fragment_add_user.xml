@@ -76,6 +76,38 @@
                             android:background="@drawable/border_login"
                             android:orientation="horizontal">
 
+                            <Spinner
+                                android:id="@+id/spUserType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_2ssp"
+                                android:entries="@array/userType"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@color/black_light"
+                                android:textColorHint="@color/black_light" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5ssp"
+                        android:layout_marginTop="@dimen/_22ssp"
+                        android:layout_marginEnd="@dimen/_5ssp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_login"
+                            android:orientation="horizontal">
+
                             <androidx.appcompat.widget.AppCompatEditText
                                 android:id="@+id/etFName"
                                 android:layout_width="match_parent"
@@ -92,7 +124,10 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+
+
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llCourse"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -124,6 +159,7 @@
 
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBranch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -154,6 +190,7 @@
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llSection"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -183,38 +220,10 @@
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="@dimen/_5ssp"
-                        android:layout_marginTop="@dimen/_22ssp"
-                        android:layout_marginEnd="@dimen/_5ssp"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/border_login"
-                            android:orientation="horizontal">
-
-                            <Spinner
-                                android:id="@+id/spUserType"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="@dimen/_2ssp"
-                                android:entries="@array/userType"
-                                android:fontFamily="@font/poppins_regular"
-                                android:textColor="@color/black_light"
-                                android:textColorHint="@color/black_light" />
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llFeesAmount"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -248,6 +257,7 @@
 
 
                     <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -333,7 +343,7 @@
                                 android:layout_margin="@dimen/_2ssp"
                                 android:background="@null"
                                 android:fontFamily="@font/poppins_regular"
-                                android:hint="Roll No"
+                                android:hint="Password"
                                 android:textColor="@color/black_light"
                                 android:textColorHint="@color/black_light" />
                         </androidx.appcompat.widget.LinearLayoutCompat>

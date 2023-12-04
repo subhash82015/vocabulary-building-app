@@ -78,7 +78,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="@dimen/_2ssp"
-                                android:entries="@array/branch"
                                 android:fontFamily="@font/poppins_regular"
                                 android:textColor="@color/black_light"
                                 android:textColorHint="@color/black_light" />

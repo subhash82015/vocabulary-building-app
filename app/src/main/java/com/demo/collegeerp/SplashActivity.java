@@ -43,6 +43,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 if (sharedPreferenceUtil.isLoginAlready()) {
                     Intent mainIntent = new Intent(SplashActivity.this, DashboardActivity.class);
+                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(mainIntent);
                     finish();
                 } else {

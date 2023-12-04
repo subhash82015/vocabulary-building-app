@@ -10,9 +10,9 @@
     <array name="branch">
         <item>Select Branch</item>
         <item>CSE</item>
-        <item>IT</item>
-        <item>EC</item>
-        <item>EN</item>
+        <item>Mechanical</item>
+        <item>Civil</item>
+        <item>E&amp;TC</item>
     </array>
     <array name="section">
         <item>Select Section</item>
