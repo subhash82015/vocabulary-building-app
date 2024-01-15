@@ -7,6 +7,7 @@ public class Constants {
     public static String ACCESS_TOKEN = "access_token";
     public static String IS_LOGIN_ALREADY = "isLoginAlready";
     public static String USER_TYPE = "userType";
+    public static String MOBILE = "mobile";
     public static Long USER_ID = 0L;
 
     public static int USER_MANAGEMENT = 1;
@@ -18,6 +19,7 @@ public class Constants {
     public static int EMERGENCY = 7;
     public static int ANALYTICS = 8;
     public static int LOGOUT = 9;
+    public static int FEES = 10;
 
     public static Long DEFAULT_USER_ID = Long.valueOf(0);
     public static int DEFAULT = 0;
@@ -28,6 +30,7 @@ public class Constants {
 
     public static String SCREEN_NAME = "screen_name";
     public static String NOTIFICATION = "notification";
+    public static String FEES_SCREEEN = "fees_screen";
 
     public static String DOCUMENT_NAME = "7xnrQ9DZIlvVFc4xw9Dw";
 
@@ -46,4 +49,5 @@ public class Constants {
     public static String NOTIFICATION_COLLECTION_NAME = "notifications";
 
     public static String BUS_ACCOUNT_COLLECTION_NAME = "bus_accounts";
+    public static String FEES_COLLECTION_NAME = "fees";
 }

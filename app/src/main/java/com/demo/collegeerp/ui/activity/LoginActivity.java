@@ -105,6 +105,7 @@ public class LoginActivity extends AppCompatActivity {
             section = (String) documentData.get("section");
             branch = (String) documentData.get("branch");
             roll_no = (String) documentData.get("roll_no");
+            mobile = (String) documentData.get("mobile");
             sharedPreferenceUtil.setUserId(userid);
             sharedPreferenceUtil.setUserDetails(Constants.ROLL_NO, roll_no);
             sharedPreferenceUtil.setUserDetails(Constants.BRANCH, branch);
@@ -112,6 +113,7 @@ public class LoginActivity extends AppCompatActivity {
             sharedPreferenceUtil.setUserDetails(Constants.COURSE, course);
             sharedPreferenceUtil.setUserDetails(Constants.FULL_NAME, full_name);
             sharedPreferenceUtil.setUserDetails(Constants.USER_TYPE, usertype);
+            sharedPreferenceUtil.setUserDetails(Constants.MOBILE, mobile);
             sharedPreferenceUtil.setUserId(userid);
             navigateToDashboard();
         }

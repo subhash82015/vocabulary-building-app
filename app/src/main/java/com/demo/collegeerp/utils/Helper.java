@@ -35,10 +35,14 @@ public class Helper {
             menuArrayList.add(new MenuItems(Constants.ANALYTICS, context.getString(R.string.analytics), R.drawable.baseline_view_list_24, true));
         }
 
-        if (type.equals(Constants.PARENT) || type.equals(Constants.DRIVER)) {
+        /*if (type.equals(Constants.PARENT) || type.equals(Constants.DRIVER)) {
             menuArrayList.add(new MenuItems(Constants.ATT_MANAGEMENT, context.getString(R.string.att_tracking), R.drawable.baseline_calendar_month_24, true));
         } else if (type.equals(Constants.STUDENT)) {
             menuArrayList.add(new MenuItems(Constants.ATT_MANAGEMENT, context.getString(R.string.att_confirmation), R.drawable.baseline_calendar_month_24, true));
+        }*/
+
+        if (type.equals(Constants.STUDENT)) {
+            menuArrayList.add(new MenuItems(Constants.FEES, context.getString(R.string.add_fees), R.drawable.baseline_view_list_24, true));
         }
 
         menuArrayList.add(new MenuItems(Constants.LOGOUT, context.getString(R.string.logout), R.drawable.baseline_logout_24, true));

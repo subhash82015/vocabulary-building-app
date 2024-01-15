@@ -27,4 +27,13 @@
         <item>Student</item>
         <item>Driver</item>
     </array>
+
+    <array name="payment_type">
+        <item>Select Payment Type</item>
+        <item>PhonePe</item>
+        <item>Google Pay</item>
+        <item>Paytm</item>
+        <item>UPI</item>
+        <item>Cash</item>
+    </array>
 </resources>
