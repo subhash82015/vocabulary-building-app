@@ -24,6 +24,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
+
 
 public class AddFeesFragment extends Fragment {
 
@@ -107,9 +109,9 @@ public class AddFeesFragment extends Fragment {
 
     private void addPayment() {
         customProgressDialog.show();
-        DocumentReference docRef = firebaseFirestore.collection(Constants.FEES_COLLECTION_NAME).document(sharedPreferenceUtil.getUserDetails(Constants.MOBILE)); // Firestore database reference
+        DocumentReference docRef = firebaseFirestore.collection(Constants.FEES_COLLECTION_NAME).document(sharedPreferenceUtil.getUserDetails(Constants.MOBILE) + "_" + Calendar.getInstance().getTime()); // Firestore database reference
         // Create a new user object
-        AddFees addFees = new AddFees(sharedPreferenceUtil.getUserId(), amount, remark, payType);
+        AddFees addFees = new AddFees(sharedPreferenceUtil.getUserId(), amount, remark, payType, sharedPreferenceUtil.getUserDetails(Constants.FULL_NAME));
 
         // Adding user information to Firestore
         docRef.set(addFees).addOnSuccessListener(new OnSuccessListener<Void>() {

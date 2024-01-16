@@ -6,16 +6,18 @@ public class AddFees {
     private String amount;
     private String remark;
     private String payType;
+    private String name;
 
     public AddFees() {
         // Default constructor required for Firestore
     }
 
-    public AddFees(Long userId, String amount, String remark, String payType) {
+    public AddFees(Long userId, String amount, String remark, String payType, String name) {
         this.userId = userId;
         this.amount = amount;
         this.remark = remark;
         this.payType = payType;
+        this.name = name;
 
     }
 
@@ -50,6 +52,14 @@ public class AddFees {
 
     public void setPayType(String payType) {
         this.payType = payType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }

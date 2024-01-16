@@ -11,6 +11,7 @@ import com.demo.collegeerp.R;
 import com.demo.collegeerp.databinding.ActivityCommonBinding;
 import com.demo.collegeerp.databinding.ActivityDashboardBinding;
 import com.demo.collegeerp.ui.fragment.AddFeesFragment;
+import com.demo.collegeerp.ui.fragment.FeesListFragment;
 import com.demo.collegeerp.ui.fragment.NotificationFragment;
 import com.demo.collegeerp.utils.Constants;
 
@@ -50,6 +51,10 @@ public class CommonActivity extends AppCompatActivity {
             binding.tvCommonTitle.setText("Fees");
             AddFeesFragment addFeesFragment = new AddFeesFragment();
             openFragment(addFeesFragment);
+        } else if (screen_name.equals(Constants.ADMIN_FEES_SCREEEN)) {
+            binding.tvCommonTitle.setText(getString(R.string.analytics));
+            FeesListFragment feesListFragment = new FeesListFragment();
+            openFragment(feesListFragment);
         }
     }
 

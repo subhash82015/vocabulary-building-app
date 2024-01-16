@@ -31,6 +31,7 @@ public class Constants {
     public static String SCREEN_NAME = "screen_name";
     public static String NOTIFICATION = "notification";
     public static String FEES_SCREEEN = "fees_screen";
+    public static String ADMIN_FEES_SCREEEN = "admin_fees_screen";
 
     public static String DOCUMENT_NAME = "7xnrQ9DZIlvVFc4xw9Dw";
 
