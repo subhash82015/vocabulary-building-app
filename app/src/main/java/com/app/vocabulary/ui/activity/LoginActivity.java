@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
         if (documentData != null) {
             // Access 'userid' and 'usertype' fields
             userid = (Long) documentData.get("userid");
-            usertype = (Long) documentData.get("type");
+            usertype = (Long) documentData.get("usertype");
             full_name = (String) documentData.get("name");
             mobile = (String) documentData.get("mobile");
             sharedPreferenceUtil.setUserId(userid);
