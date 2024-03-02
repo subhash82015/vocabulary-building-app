@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">CollegeTrackingSystem</string>
+    <string name="app_name">Vocabulary Building</string>
 
     <!-- Login-->
     <string name="login_head">Login</string>
+    <string name="register">Register</string>
     <string name="login_here"><u>Login here</u></string>
     <string name="login_description">Use your Username &amp; Password to login in App.</string>
     <string name="forgot_password"><u>Forgot Password?</u></string>

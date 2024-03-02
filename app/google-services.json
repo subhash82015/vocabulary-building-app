@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "63069669739",
-    "project_id": "tkietwaranafinalyearproject",
-    "storage_bucket": "tkietwaranafinalyearproject.appspot.com"
+    "project_number": "451574316363",
+    "project_id": "vocabulary-building-app-86d34",
+    "storage_bucket": "vocabulary-building-app-86d34.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:63069669739:android:bf97dbc7188ad84e1b642e",
+        "mobilesdk_app_id": "1:451574316363:android:98859234d82996cb18bcce",
         "android_client_info": {
-          "package_name": "com.demo.collegeerp"
+          "package_name": "com.app.vocabulary"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBNeWOQiJAFRRu_7QWTailHFEiuPPSEY6E"
+          "current_key": "AIzaSyCYbjxlpgxoP743bJYp5mET6Pl3J0IWZxo"
         }
       ],
       "services": {

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.demo.collegeerp'
+    namespace 'com.app.vocabulary'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.demo.collegeerp"
+        applicationId "com.app.vocabulary"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -52,10 +52,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
-   // implementation 'com.google.android.gms:play-services-places:18.0.0'
-    implementation 'com.google.android.libraries.places:places:3.3.0' // Use the latest version available
 
-
-    implementation 'com.google.maps.android:android-maps-utils:3.7.0'
 }
