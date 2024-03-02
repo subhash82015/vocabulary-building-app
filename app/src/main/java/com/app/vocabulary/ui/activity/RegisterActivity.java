@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.vocabulary.databinding.ActivityRegisterBinding;
-import com.app.vocabulary.models.post.AddUsers;
+import com.app.vocabulary.models.AddUsers;
 import com.app.vocabulary.utils.Constants;
 import com.app.vocabulary.utils.CustomProgressDialog;
 import com.app.vocabulary.utils.FirebaseRepo;

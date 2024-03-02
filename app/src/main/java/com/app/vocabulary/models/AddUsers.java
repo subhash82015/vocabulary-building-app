@@ -1,4 +1,4 @@
-package com.app.vocabulary.models.post;
+package com.app.vocabulary.models;
 
 public class AddUsers {
     private String full_name;
