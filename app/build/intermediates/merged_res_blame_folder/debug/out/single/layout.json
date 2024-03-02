@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/activity_dashboard.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/activity_dashboard.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/progress_dialoge_layout.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/progress_dialoge_layout.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/notifications_list_items.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/notifications_list_items.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/user_list_items.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/user_list_items.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/activity_register.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/activity_main.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.app.vocabulary.app-mergeDebugResources-41:/layout/activity_login.xml",
+        "source": "com.app.vocabulary.app-main-44:/layout/activity_login.xml"
+    }
+]
