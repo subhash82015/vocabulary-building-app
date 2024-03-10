@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
-    String mobile = "", password = "";
+    String mobile = "", password = "", email = "";
     private SharedPreferenceUtil sharedPreferenceUtil;
     private static final String TAG = "LoginActivity";
     private FirebaseFirestore firebaseFirestore;
@@ -106,12 +106,14 @@ public class LoginActivity extends AppCompatActivity {
             // Access 'userid' and 'usertype' fields
             userid = (Long) documentData.get("userid");
             usertype = (Long) documentData.get("usertype");
-            full_name = (String) documentData.get("name");
+            full_name = (String) documentData.get("full_name");
             mobile = (String) documentData.get("mobile");
+            email = (String) documentData.get("email");
             sharedPreferenceUtil.setUserId(userid);
             sharedPreferenceUtil.setUserDetails(Constants.FULL_NAME, full_name);
             sharedPreferenceUtil.setUserType(usertype);
             sharedPreferenceUtil.setUserDetails(Constants.MOBILE, mobile);
+            sharedPreferenceUtil.setUserDetails(Constants.EMAIL, email);
             sharedPreferenceUtil.setUserId(userid);
             navigateToDashboard();
         }

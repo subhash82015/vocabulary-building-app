@@ -7,12 +7,14 @@ public class Constants {
     public static String IS_LOGIN_ALREADY = "isLoginAlready";
     public static String USER_TYPE = "userType";
     public static String MOBILE = "mobile";
+    public static String EMAIL = "email";
     public static int DEFAULT = 0;
     public static String FULL_NAME = "full_name";
     public static String USERID = "userid";
 
     //Firebase
     public static String ACCOUNT_COLLECTION_NAME = "accounts";
+    public static String NOTIFICATION_COLLECTION_NAME = "notification";
 
 
 }
