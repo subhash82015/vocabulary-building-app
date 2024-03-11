@@ -6,6 +6,6 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {WordEntity.class}, version = 1, exportSchema = false)
 public abstract class WordDatabase extends RoomDatabase {
-    public abstract WordDao yourDao();
+    public abstract WordDao wordDao();
 }
 

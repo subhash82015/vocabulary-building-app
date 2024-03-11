@@ -156,7 +156,7 @@ public final class WordDatabase_Impl extends WordDatabase {
   }
 
   @Override
-  public WordDao yourDao() {
+  public WordDao wordDao() {
     if (_wordDao != null) {
       return _wordDao;
     } else {

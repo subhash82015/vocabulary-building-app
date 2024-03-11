@@ -1,7 +1,5 @@
 package com.app.vocabulary.ui.activity;
 
-import static kotlinx.coroutines.CoroutineScopeKt.CoroutineScope;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,9 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.app.vocabulary.R;
 import com.app.vocabulary.databinding.ActivityDashboardBinding;
-import com.app.vocabulary.databinding.ActivityLoginBinding;
 import com.app.vocabulary.room.AppApplication;
 import com.app.vocabulary.room.WordDao;
 import com.app.vocabulary.room.WordDatabase;
@@ -23,7 +19,6 @@ import com.app.vocabulary.utils.FirebaseRepo;
 import com.app.vocabulary.utils.SharedPreferenceUtil;
 import com.app.vocabulary.utils.Tools;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
@@ -32,14 +27,12 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import kotlinx.coroutines.CoroutineScope;
-import kotlinx.coroutines.Dispatchers;
 
-
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements AsyncResponse<List<WordEntity>> {
 
     private ActivityDashboardBinding binding;
     private SharedPreferenceUtil sharedPreferenceUtil;
@@ -67,6 +60,7 @@ public class DashboardActivity extends AppCompatActivity {
         checkUser(getCurrentData());
         clickHandle();
         setViews();
+        getRoomList();
     }
 
     private void setViews() {
@@ -178,6 +172,44 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
+    private void getRoomList() {
+       // List<WordEntity> entities = AppApplication.database.wordDao().getAllEntities();
+       // new InsertAsyncTask(AppApplication.database.wordDao()).execute();
+
+        new GetEntitiesAsyncTask(AppApplication.database.wordDao(), this).execute();
+
+    }
+
+    @Override
+    public void processFinish(List<WordEntity> result) {
+        Tools.logs(TAG, "processFinish "+result.size());
+        binding.tvOfflineCount.setText(result.size()+" Words");
+    }
+
+
+    public class GetEntitiesAsyncTask extends AsyncTask<Void, Void, List<WordEntity>> {
+        private WordDao wordDao;
+        private AsyncResponse<List<WordEntity>> delegate;
+
+        public GetEntitiesAsyncTask(WordDao wordDao, AsyncResponse<List<WordEntity>> delegate) {
+            this.wordDao = wordDao;
+            this.delegate = delegate;
+        }
+
+        @Override
+        protected List<WordEntity> doInBackground(Void... voids) {
+            return wordDao.getAllEntities();
+        }
+
+        @Override
+        protected void onPostExecute(List<WordEntity> entities) {
+            delegate.processFinish(entities);
+        }
+    }
+
+
+
+
     private void saveInRoom() {
         try {
             WordEntity entity = new WordEntity();
@@ -192,18 +224,18 @@ public class DashboardActivity extends AppCompatActivity {
 
             WordDatabase database = AppApplication.database;
             if (database != null) {
-                new InsertAsyncTask(database.yourDao()).execute(entity);
+                new InsertAsyncTask(database.wordDao()).execute(entity);
 
-               // database.yourDao().insert(entity); // Replace with your actual operation
-               // AppApplication.database.yourDao().insert(entity);
-                Tools.logs(TAG, "saveInRoom: Save record" );
+                // database.yourDao().insert(entity); // Replace with your actual operation
+                // AppApplication.database.yourDao().insert(entity);
+                Tools.logs(TAG, "saveInRoom: Save record");
                 Tools.showToast(DashboardActivity.this, "Save record!");
 
             } else {
                 // Handle the case where the database is null
                 // For example, show a message or log an error
                 System.out.println("Database is null");
-                Tools.logs(TAG, "Database is null" );
+                Tools.logs(TAG, "Database is null");
 
             }
 
@@ -228,4 +260,20 @@ public class DashboardActivity extends AppCompatActivity {
         }
     }
 
+    public class getAsyncTask extends AsyncTask<List<WordEntity>, Void, Void> {
+        private WordDao dao;
+
+        public getAsyncTask(WordDao dao) {
+            this.dao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(List<WordEntity>... entities) {
+            dao.getAllEntities();
+            return null;
+        }
+    }
+
+
 }
+

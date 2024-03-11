@@ -1,49 +1,52 @@
 com.app.vocabulary.app-lifecycle-service-2.6.1-0 C:\Users\lenovo\.gradle\caches\transforms-3\02e27f3f5c948a45408988d2db2f7375\transformed\lifecycle-service-2.6.1\res
-com.app.vocabulary.app-appcompat-resources-1.6.1-1 C:\Users\lenovo\.gradle\caches\transforms-3\0b006637ac544ed0be35df00407e952a\transformed\appcompat-resources-1.6.1\res
-com.app.vocabulary.app-material-1.10.0-2 C:\Users\lenovo\.gradle\caches\transforms-3\0c76c70707dc8654a16a6bc9723803db\transformed\material-1.10.0\res
-com.app.vocabulary.app-constraintlayout-2.1.4-3 C:\Users\lenovo\.gradle\caches\transforms-3\147c742379e4ddb1b4cfbb38def7024e\transformed\constraintlayout-2.1.4\res
-com.app.vocabulary.app-activity-1.8.0-4 C:\Users\lenovo\.gradle\caches\transforms-3\22d37c495e2f85de847d71f8700bffdc\transformed\activity-1.8.0\res
-com.app.vocabulary.app-firebase-common-20.4.2-5 C:\Users\lenovo\.gradle\caches\transforms-3\3a1551188ad568a028e0ab3951c6fdfa\transformed\firebase-common-20.4.2\res
-com.app.vocabulary.app-emoji2-views-helper-1.2.0-6 C:\Users\lenovo\.gradle\caches\transforms-3\3d3f280d837cb7d4fe036d22d99c97f4\transformed\emoji2-views-helper-1.2.0\res
-com.app.vocabulary.app-recyclerview-1.1.0-7 C:\Users\lenovo\.gradle\caches\transforms-3\402b6b8d85b749c7fea5e6abf1bec206\transformed\recyclerview-1.1.0\res
-com.app.vocabulary.app-fragment-1.3.6-8 C:\Users\lenovo\.gradle\caches\transforms-3\4414666a9c92586383687bc5fb91ee23\transformed\fragment-1.3.6\res
-com.app.vocabulary.app-startup-runtime-1.1.1-9 C:\Users\lenovo\.gradle\caches\transforms-3\479a43ae3736519fe865fbe6fd917ed8\transformed\startup-runtime-1.1.1\res
-com.app.vocabulary.app-firebase-messaging-23.4.1-10 C:\Users\lenovo\.gradle\caches\transforms-3\4a7ab13bcb7cb33547da402cfac3936e\transformed\firebase-messaging-23.4.1\res
-com.app.vocabulary.app-lifecycle-process-2.6.1-11 C:\Users\lenovo\.gradle\caches\transforms-3\53efd19d3779d0c082943ce1d2e256e9\transformed\lifecycle-process-2.6.1\res
-com.app.vocabulary.app-drawerlayout-1.1.1-12 C:\Users\lenovo\.gradle\caches\transforms-3\5c21c7e14b7c3ff78ef38246a7ded1c0\transformed\drawerlayout-1.1.1\res
-com.app.vocabulary.app-work-runtime-2.7.0-13 C:\Users\lenovo\.gradle\caches\transforms-3\5f7ccba3de8b33c1ad0006eb4532bcdb\transformed\work-runtime-2.7.0\res
-com.app.vocabulary.app-ssp-android-1.0.6-14 C:\Users\lenovo\.gradle\caches\transforms-3\68a94d7029f1c39a256209c48df93f96\transformed\ssp-android-1.0.6\res
-com.app.vocabulary.app-annotation-experimental-1.3.0-15 C:\Users\lenovo\.gradle\caches\transforms-3\68c9f4792ab7ae3281e8fd44ae45af85\transformed\annotation-experimental-1.3.0\res
-com.app.vocabulary.app-ads-adservices-1.0.0-beta05-16 C:\Users\lenovo\.gradle\caches\transforms-3\6b5985faaaed68d138f21ae01e808c66\transformed\ads-adservices-1.0.0-beta05\res
-com.app.vocabulary.app-sdp-android-1.0.6-17 C:\Users\lenovo\.gradle\caches\transforms-3\6c97c57cbd732a2621c24eef2f1dd231\transformed\sdp-android-1.0.6\res
-com.app.vocabulary.app-profileinstaller-1.3.0-18 C:\Users\lenovo\.gradle\caches\transforms-3\6cbaa27cc7823f49d67732631abf8eed\transformed\profileinstaller-1.3.0\res
-com.app.vocabulary.app-transition-1.2.0-19 C:\Users\lenovo\.gradle\caches\transforms-3\71b34a257bb3c589fb35983eda405c8e\transformed\transition-1.2.0\res
-com.app.vocabulary.app-lifecycle-livedata-2.6.1-20 C:\Users\lenovo\.gradle\caches\transforms-3\798809335cf1c0f242ae791043dbbc20\transformed\lifecycle-livedata-2.6.1\res
-com.app.vocabulary.app-play-services-basement-18.1.0-21 C:\Users\lenovo\.gradle\caches\transforms-3\7b683a7ec2558d28220a502804b789dd\transformed\play-services-basement-18.1.0\res
-com.app.vocabulary.app-lifecycle-runtime-2.6.1-22 C:\Users\lenovo\.gradle\caches\transforms-3\7ff2f78f59a449a44719774adab688ff\transformed\lifecycle-runtime-2.6.1\res
-com.app.vocabulary.app-circleimageview-3.1.0-23 C:\Users\lenovo\.gradle\caches\transforms-3\814e653763c2c90984d01217f9eb8313\transformed\circleimageview-3.1.0\res
-com.app.vocabulary.app-lifecycle-livedata-core-2.6.1-24 C:\Users\lenovo\.gradle\caches\transforms-3\8788cc592cc0fe75cb2229549cd8978c\transformed\lifecycle-livedata-core-2.6.1\res
-com.app.vocabulary.app-play-services-base-18.0.1-25 C:\Users\lenovo\.gradle\caches\transforms-3\8a0dfd0d34dfdccbf64d380e9e38b3ba\transformed\play-services-base-18.0.1\res
-com.app.vocabulary.app-core-1.9.0-26 C:\Users\lenovo\.gradle\caches\transforms-3\99234262f9b153478fa831e26197c5ac\transformed\core-1.9.0\res
-com.app.vocabulary.app-ads-adservices-java-1.0.0-beta05-27 C:\Users\lenovo\.gradle\caches\transforms-3\9d57d74edb734be3b8485ed719f96b7c\transformed\ads-adservices-java-1.0.0-beta05\res
-com.app.vocabulary.app-appcompat-1.6.1-28 C:\Users\lenovo\.gradle\caches\transforms-3\a3e64f01612f47bcde7b28a4705201d7\transformed\appcompat-1.6.1\res
-com.app.vocabulary.app-core-ktx-1.9.0-29 C:\Users\lenovo\.gradle\caches\transforms-3\a92f8858abc08fb6ab9971b3c0fb8ded\transformed\core-ktx-1.9.0\res
-com.app.vocabulary.app-lifecycle-viewmodel-2.6.1-30 C:\Users\lenovo\.gradle\caches\transforms-3\ad82ccc94f3064634c9eee7d3af2aee2\transformed\lifecycle-viewmodel-2.6.1\res
-com.app.vocabulary.app-cardview-1.0.0-31 C:\Users\lenovo\.gradle\caches\transforms-3\adb8e06cbc44d50dac2bb380b314441f\transformed\cardview-1.0.0\res
-com.app.vocabulary.app-coordinatorlayout-1.1.0-32 C:\Users\lenovo\.gradle\caches\transforms-3\c57c4c389f3a21d30d0582d20e30f5a8\transformed\coordinatorlayout-1.1.0\res
-com.app.vocabulary.app-work-runtime-ktx-2.7.0-33 C:\Users\lenovo\.gradle\caches\transforms-3\c9273a484c52b87216945ba667f39c02\transformed\work-runtime-ktx-2.7.0\res
-com.app.vocabulary.app-viewpager2-1.0.0-34 C:\Users\lenovo\.gradle\caches\transforms-3\da0e96b2799a5c168498b7840a3e3651\transformed\viewpager2-1.0.0\res
-com.app.vocabulary.app-savedstate-1.2.1-35 C:\Users\lenovo\.gradle\caches\transforms-3\dc58e71314f9e2fc22d11b074a4a4f78\transformed\savedstate-1.2.1\res
-com.app.vocabulary.app-lifecycle-viewmodel-savedstate-2.6.1-36 C:\Users\lenovo\.gradle\caches\transforms-3\dd79a56f6734bc0cfd7e35e0a8b771ee\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
-com.app.vocabulary.app-core-runtime-2.2.0-37 C:\Users\lenovo\.gradle\caches\transforms-3\f745afc39157af0c2c1b81bf26e2d54b\transformed\core-runtime-2.2.0\res
-com.app.vocabulary.app-emoji2-1.2.0-38 C:\Users\lenovo\.gradle\caches\transforms-3\faf7ff047d867e65b78c9737ad41b2af\transformed\emoji2-1.2.0\res
-com.app.vocabulary.app-play-services-measurement-api-21.5.0-39 C:\Users\lenovo\.gradle\caches\transforms-3\fbaf77720d38d261f8c9c08d5f64903c\transformed\play-services-measurement-api-21.5.0\res
-com.app.vocabulary.app-pngs-40 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\pngs\debug
-com.app.vocabulary.app-res-41 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\processDebugGoogleServices
-com.app.vocabulary.app-resValues-42 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\resValues\debug
-com.app.vocabulary.app-rs-43 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\rs\debug
-com.app.vocabulary.app-packageDebugResources-44 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.app.vocabulary.app-packageDebugResources-45 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.app.vocabulary.app-merged_res-46 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\merged_res\debug
-com.app.vocabulary.app-debug-47 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\src\debug\res
-com.app.vocabulary.app-main-48 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\src\main\res
+com.app.vocabulary.app-sqlite-2.2.0-1 C:\Users\lenovo\.gradle\caches\transforms-3\06c0a7501bd1842303895fdb754a4b6e\transformed\sqlite-2.2.0\res
+com.app.vocabulary.app-appcompat-resources-1.6.1-2 C:\Users\lenovo\.gradle\caches\transforms-3\0b006637ac544ed0be35df00407e952a\transformed\appcompat-resources-1.6.1\res
+com.app.vocabulary.app-material-1.10.0-3 C:\Users\lenovo\.gradle\caches\transforms-3\0c76c70707dc8654a16a6bc9723803db\transformed\material-1.10.0\res
+com.app.vocabulary.app-constraintlayout-2.1.4-4 C:\Users\lenovo\.gradle\caches\transforms-3\147c742379e4ddb1b4cfbb38def7024e\transformed\constraintlayout-2.1.4\res
+com.app.vocabulary.app-activity-1.8.0-5 C:\Users\lenovo\.gradle\caches\transforms-3\22d37c495e2f85de847d71f8700bffdc\transformed\activity-1.8.0\res
+com.app.vocabulary.app-firebase-common-20.4.2-6 C:\Users\lenovo\.gradle\caches\transforms-3\3a1551188ad568a028e0ab3951c6fdfa\transformed\firebase-common-20.4.2\res
+com.app.vocabulary.app-emoji2-views-helper-1.2.0-7 C:\Users\lenovo\.gradle\caches\transforms-3\3d3f280d837cb7d4fe036d22d99c97f4\transformed\emoji2-views-helper-1.2.0\res
+com.app.vocabulary.app-recyclerview-1.1.0-8 C:\Users\lenovo\.gradle\caches\transforms-3\402b6b8d85b749c7fea5e6abf1bec206\transformed\recyclerview-1.1.0\res
+com.app.vocabulary.app-fragment-1.3.6-9 C:\Users\lenovo\.gradle\caches\transforms-3\4414666a9c92586383687bc5fb91ee23\transformed\fragment-1.3.6\res
+com.app.vocabulary.app-startup-runtime-1.1.1-10 C:\Users\lenovo\.gradle\caches\transforms-3\479a43ae3736519fe865fbe6fd917ed8\transformed\startup-runtime-1.1.1\res
+com.app.vocabulary.app-firebase-messaging-23.4.1-11 C:\Users\lenovo\.gradle\caches\transforms-3\4a7ab13bcb7cb33547da402cfac3936e\transformed\firebase-messaging-23.4.1\res
+com.app.vocabulary.app-lifecycle-process-2.6.1-12 C:\Users\lenovo\.gradle\caches\transforms-3\53efd19d3779d0c082943ce1d2e256e9\transformed\lifecycle-process-2.6.1\res
+com.app.vocabulary.app-drawerlayout-1.1.1-13 C:\Users\lenovo\.gradle\caches\transforms-3\5c21c7e14b7c3ff78ef38246a7ded1c0\transformed\drawerlayout-1.1.1\res
+com.app.vocabulary.app-work-runtime-2.7.0-14 C:\Users\lenovo\.gradle\caches\transforms-3\5f7ccba3de8b33c1ad0006eb4532bcdb\transformed\work-runtime-2.7.0\res
+com.app.vocabulary.app-sqlite-framework-2.2.0-15 C:\Users\lenovo\.gradle\caches\transforms-3\68246c65d3aed2fbc9d90e391e04a9a3\transformed\sqlite-framework-2.2.0\res
+com.app.vocabulary.app-ssp-android-1.0.6-16 C:\Users\lenovo\.gradle\caches\transforms-3\68a94d7029f1c39a256209c48df93f96\transformed\ssp-android-1.0.6\res
+com.app.vocabulary.app-annotation-experimental-1.3.0-17 C:\Users\lenovo\.gradle\caches\transforms-3\68c9f4792ab7ae3281e8fd44ae45af85\transformed\annotation-experimental-1.3.0\res
+com.app.vocabulary.app-ads-adservices-1.0.0-beta05-18 C:\Users\lenovo\.gradle\caches\transforms-3\6b5985faaaed68d138f21ae01e808c66\transformed\ads-adservices-1.0.0-beta05\res
+com.app.vocabulary.app-sdp-android-1.0.6-19 C:\Users\lenovo\.gradle\caches\transforms-3\6c97c57cbd732a2621c24eef2f1dd231\transformed\sdp-android-1.0.6\res
+com.app.vocabulary.app-profileinstaller-1.3.0-20 C:\Users\lenovo\.gradle\caches\transforms-3\6cbaa27cc7823f49d67732631abf8eed\transformed\profileinstaller-1.3.0\res
+com.app.vocabulary.app-transition-1.2.0-21 C:\Users\lenovo\.gradle\caches\transforms-3\71b34a257bb3c589fb35983eda405c8e\transformed\transition-1.2.0\res
+com.app.vocabulary.app-room-runtime-2.4.0-22 C:\Users\lenovo\.gradle\caches\transforms-3\780daf459c6bec4017147213f0388281\transformed\room-runtime-2.4.0\res
+com.app.vocabulary.app-lifecycle-livedata-2.6.1-23 C:\Users\lenovo\.gradle\caches\transforms-3\798809335cf1c0f242ae791043dbbc20\transformed\lifecycle-livedata-2.6.1\res
+com.app.vocabulary.app-play-services-basement-18.1.0-24 C:\Users\lenovo\.gradle\caches\transforms-3\7b683a7ec2558d28220a502804b789dd\transformed\play-services-basement-18.1.0\res
+com.app.vocabulary.app-lifecycle-runtime-2.6.1-25 C:\Users\lenovo\.gradle\caches\transforms-3\7ff2f78f59a449a44719774adab688ff\transformed\lifecycle-runtime-2.6.1\res
+com.app.vocabulary.app-circleimageview-3.1.0-26 C:\Users\lenovo\.gradle\caches\transforms-3\814e653763c2c90984d01217f9eb8313\transformed\circleimageview-3.1.0\res
+com.app.vocabulary.app-lifecycle-livedata-core-2.6.1-27 C:\Users\lenovo\.gradle\caches\transforms-3\8788cc592cc0fe75cb2229549cd8978c\transformed\lifecycle-livedata-core-2.6.1\res
+com.app.vocabulary.app-play-services-base-18.0.1-28 C:\Users\lenovo\.gradle\caches\transforms-3\8a0dfd0d34dfdccbf64d380e9e38b3ba\transformed\play-services-base-18.0.1\res
+com.app.vocabulary.app-core-1.9.0-29 C:\Users\lenovo\.gradle\caches\transforms-3\99234262f9b153478fa831e26197c5ac\transformed\core-1.9.0\res
+com.app.vocabulary.app-ads-adservices-java-1.0.0-beta05-30 C:\Users\lenovo\.gradle\caches\transforms-3\9d57d74edb734be3b8485ed719f96b7c\transformed\ads-adservices-java-1.0.0-beta05\res
+com.app.vocabulary.app-appcompat-1.6.1-31 C:\Users\lenovo\.gradle\caches\transforms-3\a3e64f01612f47bcde7b28a4705201d7\transformed\appcompat-1.6.1\res
+com.app.vocabulary.app-core-ktx-1.9.0-32 C:\Users\lenovo\.gradle\caches\transforms-3\a92f8858abc08fb6ab9971b3c0fb8ded\transformed\core-ktx-1.9.0\res
+com.app.vocabulary.app-lifecycle-viewmodel-2.6.1-33 C:\Users\lenovo\.gradle\caches\transforms-3\ad82ccc94f3064634c9eee7d3af2aee2\transformed\lifecycle-viewmodel-2.6.1\res
+com.app.vocabulary.app-cardview-1.0.0-34 C:\Users\lenovo\.gradle\caches\transforms-3\adb8e06cbc44d50dac2bb380b314441f\transformed\cardview-1.0.0\res
+com.app.vocabulary.app-coordinatorlayout-1.1.0-35 C:\Users\lenovo\.gradle\caches\transforms-3\c57c4c389f3a21d30d0582d20e30f5a8\transformed\coordinatorlayout-1.1.0\res
+com.app.vocabulary.app-work-runtime-ktx-2.7.0-36 C:\Users\lenovo\.gradle\caches\transforms-3\c9273a484c52b87216945ba667f39c02\transformed\work-runtime-ktx-2.7.0\res
+com.app.vocabulary.app-viewpager2-1.0.0-37 C:\Users\lenovo\.gradle\caches\transforms-3\da0e96b2799a5c168498b7840a3e3651\transformed\viewpager2-1.0.0\res
+com.app.vocabulary.app-savedstate-1.2.1-38 C:\Users\lenovo\.gradle\caches\transforms-3\dc58e71314f9e2fc22d11b074a4a4f78\transformed\savedstate-1.2.1\res
+com.app.vocabulary.app-lifecycle-viewmodel-savedstate-2.6.1-39 C:\Users\lenovo\.gradle\caches\transforms-3\dd79a56f6734bc0cfd7e35e0a8b771ee\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.app.vocabulary.app-core-runtime-2.2.0-40 C:\Users\lenovo\.gradle\caches\transforms-3\f745afc39157af0c2c1b81bf26e2d54b\transformed\core-runtime-2.2.0\res
+com.app.vocabulary.app-emoji2-1.2.0-41 C:\Users\lenovo\.gradle\caches\transforms-3\faf7ff047d867e65b78c9737ad41b2af\transformed\emoji2-1.2.0\res
+com.app.vocabulary.app-play-services-measurement-api-21.5.0-42 C:\Users\lenovo\.gradle\caches\transforms-3\fbaf77720d38d261f8c9c08d5f64903c\transformed\play-services-measurement-api-21.5.0\res
+com.app.vocabulary.app-pngs-43 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\pngs\debug
+com.app.vocabulary.app-res-44 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\processDebugGoogleServices
+com.app.vocabulary.app-resValues-45 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\resValues\debug
+com.app.vocabulary.app-rs-46 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\generated\res\rs\debug
+com.app.vocabulary.app-packageDebugResources-47 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.app.vocabulary.app-packageDebugResources-48 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.app.vocabulary.app-merged_res-49 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\build\intermediates\merged_res\debug
+com.app.vocabulary.app-debug-50 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\src\debug\res
+com.app.vocabulary.app-main-51 F:\Android _Projects\Sandesh MH\vocabulary-building-app\app\src\main\res
