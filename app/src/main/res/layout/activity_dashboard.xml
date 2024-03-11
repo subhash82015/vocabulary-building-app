@@ -56,7 +56,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:text="admin@gmail.com"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_14sdp" />
+                        android:textSize="@dimen/_11sdp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnMobile"

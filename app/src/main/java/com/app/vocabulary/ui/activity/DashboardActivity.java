@@ -1,8 +1,11 @@
 package com.app.vocabulary.ui.activity;
 
+import static kotlinx.coroutines.CoroutineScopeKt.CoroutineScope;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +13,10 @@ import android.view.View;
 import com.app.vocabulary.R;
 import com.app.vocabulary.databinding.ActivityDashboardBinding;
 import com.app.vocabulary.databinding.ActivityLoginBinding;
+import com.app.vocabulary.room.AppApplication;
+import com.app.vocabulary.room.WordDao;
+import com.app.vocabulary.room.WordDatabase;
+import com.app.vocabulary.room.WordEntity;
 import com.app.vocabulary.utils.Constants;
 import com.app.vocabulary.utils.CustomProgressDialog;
 import com.app.vocabulary.utils.FirebaseRepo;
@@ -28,17 +35,21 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
+import kotlinx.coroutines.CoroutineScope;
+import kotlinx.coroutines.Dispatchers;
+
 
 public class DashboardActivity extends AppCompatActivity {
 
     private ActivityDashboardBinding binding;
     private SharedPreferenceUtil sharedPreferenceUtil;
-    private static final String TAG = "ActivityDashboardBinding";
+    private static final String TAG = "DashboardActivity";
     private FirebaseFirestore firebaseFirestore;
     CustomProgressDialog customProgressDialog;
     ListenerRegistration userListener;
     String synonyms = "", word = "", antonyms = "", date = "", description = "";
 
+    Long id, isBookmarks, isToday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,10 +150,9 @@ public class DashboardActivity extends AppCompatActivity {
         Tools.logs(TAG, "User Details  " + document.getData());
         Map<String, Object> documentData = document.getData();
         if (documentData != null) {
-
-            Long id = (Long) documentData.get("id");
-            Long isBookmarks = (Long) documentData.get("isBookmarks");
-            Long isToday = (Long) documentData.get("isToday");
+            id = (Long) documentData.get("id");
+            isBookmarks = (Long) documentData.get("isBookmarks");
+            isToday = (Long) documentData.get("isToday");
             synonyms = (String) documentData.get("synonyms");
             word = (String) documentData.get("word");
             antonyms = (String) documentData.get("antonyms");
@@ -154,7 +164,7 @@ public class DashboardActivity extends AppCompatActivity {
             binding.tvSynonyms.setText(synonyms);
             binding.tvAntonyms.setText(antonyms);
             binding.tvDescription.setText(description);
-
+            saveInRoom();
         }
     }
 
@@ -165,6 +175,56 @@ public class DashboardActivity extends AppCompatActivity {
         } else {
             binding.tvNoWords.setVisibility(View.GONE);
             binding.cvCard.setVisibility(View.GONE);
+        }
+    }
+
+    private void saveInRoom() {
+        try {
+            WordEntity entity = new WordEntity();
+            entity.setWord_id(Math.toIntExact(id));
+            entity.setWord(word);
+            entity.setAntonyms(antonyms);
+            entity.setDate(date);
+            entity.setDescription(description);
+            entity.setSynonyms(synonyms);
+            entity.setBookmarks(Math.toIntExact(isBookmarks));
+
+
+            WordDatabase database = AppApplication.database;
+            if (database != null) {
+                new InsertAsyncTask(database.yourDao()).execute(entity);
+
+               // database.yourDao().insert(entity); // Replace with your actual operation
+               // AppApplication.database.yourDao().insert(entity);
+                Tools.logs(TAG, "saveInRoom: Save record" );
+                Tools.showToast(DashboardActivity.this, "Save record!");
+
+            } else {
+                // Handle the case where the database is null
+                // For example, show a message or log an error
+                System.out.println("Database is null");
+                Tools.logs(TAG, "Database is null" );
+
+            }
+
+        } catch (Exception e) {
+            Tools.logs(TAG, "Exception: " + e.getMessage());
+
+        }
+
+    }
+
+    public class InsertAsyncTask extends AsyncTask<WordEntity, Void, Void> {
+        private WordDao dao;
+
+        public InsertAsyncTask(WordDao dao) {
+            this.dao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(WordEntity... entities) {
+            dao.insert(entities[0]);
+            return null;
         }
     }
 
