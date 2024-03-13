@@ -4,20 +4,28 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\progress_dialoge_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_bold.ttf.flat",
-        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_bold.ttf"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_black_italic.ttf.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_black_italic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_bold.ttf"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_favorites.png.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\favorites.png"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\layout_vocabulary_items.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\vocabulary_items.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\layout_activity_offline_past.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_offline_past.xml"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_baseline_logout_24.xml.flat",
