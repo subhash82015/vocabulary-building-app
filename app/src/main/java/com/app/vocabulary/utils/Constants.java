@@ -16,6 +16,7 @@ public class Constants {
     //Firebase
     public static String ACCOUNT_COLLECTION_NAME = "accounts";
     public static String NOTIFICATION_COLLECTION_NAME = "notification";
+    public static String FAVORITE_COLLECTION_NAME = "favorite";
 
 
 }

@@ -36,6 +36,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\baseline_person_24.xml"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\layout_activity_favorite.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_favorite.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_black_border.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\black_border.xml"
     },

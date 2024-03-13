@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-mergeDebugResources-48:\\layout\\activity_favorite.xml",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_favorite.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-mergeDebugResources-48:\\layout\\notifications_list_items.xml",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\notifications_list_items.xml"
     },
@@ -32,11 +36,11 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-mergeDebugResources-48:\\layout\\activity_offline_past.xml",
-        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_offline_past.xml"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-mergeDebugResources-48:\\layout\\progress_dialoge_layout.xml",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\progress_dialoge_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-mergeDebugResources-48:\\layout\\activity_offline_past.xml",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_offline_past.xml"
     }
 ]

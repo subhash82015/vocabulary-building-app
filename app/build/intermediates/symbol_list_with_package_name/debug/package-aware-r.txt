@@ -4056,6 +4056,7 @@ id custom
 id customPanel
 id cut
 id cvCard
+id cvFavorite
 id cvOfflinePast
 id dark
 id date_picker_actions
@@ -4424,6 +4425,7 @@ id tvCourseDetails
 id tvDate
 id tvDescription
 id tvEmail
+id tvFavoriteCount
 id tvFullName
 id tvMobile
 id tvName
@@ -4574,6 +4576,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_dashboard
+layout activity_favorite
 layout activity_login
 layout activity_main
 layout activity_offline_past

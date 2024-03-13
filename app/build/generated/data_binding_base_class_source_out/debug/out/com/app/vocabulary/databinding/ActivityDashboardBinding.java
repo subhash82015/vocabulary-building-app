@@ -37,6 +37,9 @@ public final class ActivityDashboardBinding implements ViewBinding {
   public final CardView cvCard;
 
   @NonNull
+  public final CardView cvFavorite;
+
+  @NonNull
   public final CardView cvOfflinePast;
 
   @NonNull
@@ -64,6 +67,9 @@ public final class ActivityDashboardBinding implements ViewBinding {
   public final AppCompatTextView tvEmail;
 
   @NonNull
+  public final TextView tvFavoriteCount;
+
+  @NonNull
   public final AppCompatTextView tvFullName;
 
   @NonNull
@@ -80,10 +86,11 @@ public final class ActivityDashboardBinding implements ViewBinding {
 
   private ActivityDashboardBinding(@NonNull NestedScrollView rootView,
       @NonNull AppCompatButton btnFavorite, @NonNull AppCompatButton btnMobile,
-      @NonNull TextView btnOption, @NonNull CardView cvCard, @NonNull CardView cvOfflinePast,
-      @NonNull ImageView imgShare, @NonNull ImageView ivIcon, @NonNull ImageView ivNotification,
-      @NonNull LinearLayout llNoRecord, @NonNull LinearLayout llTop, @NonNull TextView tvAntonyms,
-      @NonNull TextView tvDescription, @NonNull AppCompatTextView tvEmail,
+      @NonNull TextView btnOption, @NonNull CardView cvCard, @NonNull CardView cvFavorite,
+      @NonNull CardView cvOfflinePast, @NonNull ImageView imgShare, @NonNull ImageView ivIcon,
+      @NonNull ImageView ivNotification, @NonNull LinearLayout llNoRecord,
+      @NonNull LinearLayout llTop, @NonNull TextView tvAntonyms, @NonNull TextView tvDescription,
+      @NonNull AppCompatTextView tvEmail, @NonNull TextView tvFavoriteCount,
       @NonNull AppCompatTextView tvFullName, @NonNull TextView tvNoWords,
       @NonNull TextView tvOfflineCount, @NonNull TextView tvSynonyms, @NonNull TextView tvWord) {
     this.rootView = rootView;
@@ -91,6 +98,7 @@ public final class ActivityDashboardBinding implements ViewBinding {
     this.btnMobile = btnMobile;
     this.btnOption = btnOption;
     this.cvCard = cvCard;
+    this.cvFavorite = cvFavorite;
     this.cvOfflinePast = cvOfflinePast;
     this.imgShare = imgShare;
     this.ivIcon = ivIcon;
@@ -100,6 +108,7 @@ public final class ActivityDashboardBinding implements ViewBinding {
     this.tvAntonyms = tvAntonyms;
     this.tvDescription = tvDescription;
     this.tvEmail = tvEmail;
+    this.tvFavoriteCount = tvFavoriteCount;
     this.tvFullName = tvFullName;
     this.tvNoWords = tvNoWords;
     this.tvOfflineCount = tvOfflineCount;
@@ -158,6 +167,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cvFavorite;
+      CardView cvFavorite = ViewBindings.findChildViewById(rootView, id);
+      if (cvFavorite == null) {
+        break missingId;
+      }
+
       id = R.id.cvOfflinePast;
       CardView cvOfflinePast = ViewBindings.findChildViewById(rootView, id);
       if (cvOfflinePast == null) {
@@ -212,6 +227,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvFavoriteCount;
+      TextView tvFavoriteCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvFavoriteCount == null) {
+        break missingId;
+      }
+
       id = R.id.tvFullName;
       AppCompatTextView tvFullName = ViewBindings.findChildViewById(rootView, id);
       if (tvFullName == null) {
@@ -243,9 +264,9 @@ public final class ActivityDashboardBinding implements ViewBinding {
       }
 
       return new ActivityDashboardBinding((NestedScrollView) rootView, btnFavorite, btnMobile,
-          btnOption, cvCard, cvOfflinePast, imgShare, ivIcon, ivNotification, llNoRecord, llTop,
-          tvAntonyms, tvDescription, tvEmail, tvFullName, tvNoWords, tvOfflineCount, tvSynonyms,
-          tvWord);
+          btnOption, cvCard, cvFavorite, cvOfflinePast, imgShare, ivIcon, ivNotification,
+          llNoRecord, llTop, tvAntonyms, tvDescription, tvEmail, tvFavoriteCount, tvFullName,
+          tvNoWords, tvOfflineCount, tvSynonyms, tvWord);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

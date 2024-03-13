@@ -99,6 +99,7 @@
                     >
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvFavorite"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_10sdp"
@@ -133,6 +134,7 @@
                                 android:textSize="@dimen/_12sdp" />
 
                             <TextView
+                                android:id="@+id/tvFavoriteCount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/_8sdp"
