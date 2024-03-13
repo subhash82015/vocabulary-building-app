@@ -2,6 +2,7 @@ R_DEF: Internal format may change without notice
 local
 array branch
 array course
+array mode
 array payment_type
 array section
 array userType
@@ -66,12 +67,14 @@ font poppins_semi_bold
 font poppins_semi_bold_italic
 font poppins_thin
 id btnAddUser
+id btnFavorite
 id btnLogin
 id btnMobile
 id btnReg
 id btn_option
 id civProduct
 id cvCard
+id cvOfflinePast
 id date_selector
 id etEmail
 id etFName
@@ -84,11 +87,14 @@ id ivLogo
 id ivNotification
 id llFeesAmount
 id llHead
+id llNoRecord
 id llNotificationItemLayout
 id llTop
 id lnTop
 id name_text_view
 id progress_bar
+id rvVocabulary
+id spMode
 id tvAntonyms
 id tvBody
 id tvCourseDetails
@@ -100,6 +106,7 @@ id tvMobile
 id tvName
 id tvNoWords
 id tvNotificationTitle
+id tvOfflineCount
 id tvSynonyms
 id tvUserType
 id tvWord
@@ -107,10 +114,12 @@ id tv_message
 layout activity_dashboard
 layout activity_login
 layout activity_main
+layout activity_offline_past
 layout activity_register
 layout notifications_list_items
 layout progress_dialoge_layout
 layout user_list_items
+layout vocabulary_items
 mipmap ic_launcher
 mipmap ic_launcher_round
 string add_fees

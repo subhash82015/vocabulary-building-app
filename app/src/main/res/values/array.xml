@@ -36,4 +36,11 @@
         <item>UPI</item>
         <item>Cash</item>
     </array>
+
+
+    <array name="mode">
+        <item>Select Mode</item>
+        <item>Offline Vocabulary</item>
+        <item>Past Vocabulary</item>
+    </array>
 </resources>

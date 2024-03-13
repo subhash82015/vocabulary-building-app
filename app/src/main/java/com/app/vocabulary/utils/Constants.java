@@ -11,6 +11,7 @@ public class Constants {
     public static int DEFAULT = 0;
     public static String FULL_NAME = "full_name";
     public static String USERID = "userid";
+    public static String CURRENT_DATE = "currentData";
 
     //Firebase
     public static String ACCOUNT_COLLECTION_NAME = "accounts";

@@ -79,6 +79,7 @@ animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array branch
 array course
+array mode
 array payment_type
 array section
 array userType
@@ -4009,6 +4010,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnAddUser
+id btnFavorite
 id btnLogin
 id btnMobile
 id btnReg
@@ -4054,6 +4056,7 @@ id custom
 id customPanel
 id cut
 id cvCard
+id cvOfflinePast
 id dark
 id date_picker_actions
 id date_selector
@@ -4174,6 +4177,7 @@ id listMode
 id list_item
 id llFeesAmount
 id llHead
+id llNoRecord
 id llNotificationItemLayout
 id llTop
 id lnTop
@@ -4305,6 +4309,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvVocabulary
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -4343,6 +4348,7 @@ id snackbar_text
 id snap
 id snapMargins
 id south
+id spMode
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -4423,6 +4429,7 @@ id tvMobile
 id tvName
 id tvNoWords
 id tvNotificationTitle
+id tvOfflineCount
 id tvSynonyms
 id tvUserType
 id tvWord
@@ -4569,6 +4576,7 @@ layout abc_tooltip
 layout activity_dashboard
 layout activity_login
 layout activity_main
+layout activity_offline_past
 layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -4654,6 +4662,7 @@ layout sp_example
 layout ssp_example
 layout support_simple_spinner_dropdown_item
 layout user_list_items
+layout vocabulary_items
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

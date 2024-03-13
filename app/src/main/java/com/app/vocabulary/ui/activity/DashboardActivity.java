@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.app.vocabulary.SplashActivity;
 import com.app.vocabulary.databinding.ActivityDashboardBinding;
 import com.app.vocabulary.room.AppApplication;
 import com.app.vocabulary.room.WordDao;
@@ -74,12 +75,25 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(
-                        Intent.EXTRA_TEXT, "Word : " + word + "\nDescription : " + description + "\n"
-                                + "Synonyms: " + synonyms + "\n" + "Antonyms: " + antonyms
-                );
+                intent.putExtra(Intent.EXTRA_TEXT, "Word : " + word + "\nDescription : " + description + "\n" + "Synonyms: " + synonyms + "\n" + "Antonyms: " + antonyms);
                 intent.setType("text/plain");
                 startActivity(Intent.createChooser(intent, "Send To"));
+
+            }
+        });
+        binding.cvOfflinePast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, OfflinePastActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+
+            }
+        });
+        binding.btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
 
             }
         });
@@ -158,7 +172,10 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
             binding.tvSynonyms.setText(synonyms);
             binding.tvAntonyms.setText(antonyms);
             binding.tvDescription.setText(description);
-            saveInRoom();
+            if (!sharedPreferenceUtil.getUserDetails(Constants.CURRENT_DATE).equals(getCurrentData())) {
+                sharedPreferenceUtil.setUserDetails(Constants.CURRENT_DATE, getCurrentData());
+                saveInRoom();
+            }
         }
     }
 
@@ -166,15 +183,17 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
         if (flag) {
             binding.tvNoWords.setVisibility(View.VISIBLE);
             binding.cvCard.setVisibility(View.VISIBLE);
+            binding.llNoRecord.setVisibility(View.GONE);
         } else {
             binding.tvNoWords.setVisibility(View.GONE);
             binding.cvCard.setVisibility(View.GONE);
+            binding.llNoRecord.setVisibility(View.VISIBLE);
         }
     }
 
     private void getRoomList() {
-       // List<WordEntity> entities = AppApplication.database.wordDao().getAllEntities();
-       // new InsertAsyncTask(AppApplication.database.wordDao()).execute();
+        // List<WordEntity> entities = AppApplication.database.wordDao().getAllEntities();
+        // new InsertAsyncTask(AppApplication.database.wordDao()).execute();
 
         new GetEntitiesAsyncTask(AppApplication.database.wordDao(), this).execute();
 
@@ -182,8 +201,8 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
 
     @Override
     public void processFinish(List<WordEntity> result) {
-        Tools.logs(TAG, "processFinish "+result.size());
-        binding.tvOfflineCount.setText(result.size()+" Words");
+        Tools.logs(TAG, "processFinish " + result.size());
+        binding.tvOfflineCount.setText(result.size() + " Words");
     }
 
 
@@ -206,8 +225,6 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
             delegate.processFinish(entities);
         }
     }
-
-
 
 
     private void saveInRoom() {

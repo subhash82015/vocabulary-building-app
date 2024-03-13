@@ -149,6 +149,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvOfflinePast"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="@dimen/_10sdp"
@@ -325,7 +326,7 @@
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnLogin"
+                        android:id="@+id/btnFavorite"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/btn_border"
@@ -353,6 +354,7 @@
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
+            android:id="@+id/llNoRecord"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"

@@ -78,6 +78,7 @@ int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f020020
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020021
 int array branch 0x7f030000
 int array course 0x7f030001
+int array mode 0x7f030005
 int array payment_type 0x7f030002
 int array section 0x7f030003
 int array userType 0x7f030004
@@ -4008,6 +4009,7 @@ int id bounceBoth 0x7f0a0061
 int id bounceEnd 0x7f0a0062
 int id bounceStart 0x7f0a0063
 int id btnAddUser 0x7f0a0064
+int id btnFavorite 0x7f0a0225
 int id btnLogin 0x7f0a0065
 int id btnMobile 0x7f0a021e
 int id btnReg 0x7f0a0066
@@ -4053,6 +4055,7 @@ int id custom 0x7f0a008e
 int id customPanel 0x7f0a008f
 int id cut 0x7f0a0090
 int id cvCard 0x7f0a0217
+int id cvOfflinePast 0x7f0a0221
 int id dark 0x7f0a0091
 int id date_picker_actions 0x7f0a0092
 int id date_selector 0x7f0a0093
@@ -4173,6 +4176,7 @@ int id listMode 0x7f0a0104
 int id list_item 0x7f0a0105
 int id llFeesAmount 0x7f0a0106
 int id llHead 0x7f0a0107
+int id llNoRecord 0x7f0a0224
 int id llNotificationItemLayout 0x7f0a0108
 int id llTop 0x7f0a0109
 int id lnTop 0x7f0a010a
@@ -4304,6 +4308,7 @@ int id right_icon 0x7f0a0187
 int id right_side 0x7f0a0188
 int id rounded 0x7f0a0189
 int id row_index_key 0x7f0a018a
+int id rvVocabulary 0x7f0a0222
 int id save_non_transition_alpha 0x7f0a018b
 int id save_overlay_view 0x7f0a018c
 int id sawtooth 0x7f0a018d
@@ -4342,6 +4347,7 @@ int id snackbar_text 0x7f0a01ad
 int id snap 0x7f0a01ae
 int id snapMargins 0x7f0a01af
 int id south 0x7f0a01b0
+int id spMode 0x7f0a0223
 int id spacer 0x7f0a01b1
 int id special_effects_controller_view_tag 0x7f0a01b2
 int id spline 0x7f0a01b3
@@ -4422,6 +4428,7 @@ int id tvMobile 0x7f0a01fa
 int id tvName 0x7f0a01fb
 int id tvNoWords 0x7f0a021a
 int id tvNotificationTitle 0x7f0a01fc
+int id tvOfflineCount 0x7f0a0220
 int id tvSynonyms 0x7f0a021b
 int id tvUserType 0x7f0a01fd
 int id tvWord 0x7f0a021c
@@ -4568,6 +4575,7 @@ int layout abc_tooltip 0x7f0d001b
 int layout activity_dashboard 0x7f0d001c
 int layout activity_login 0x7f0d001d
 int layout activity_main 0x7f0d001e
+int layout activity_offline_past 0x7f0d0074
 int layout activity_register 0x7f0d001f
 int layout custom_dialog 0x7f0d0020
 int layout design_bottom_navigation_item 0x7f0d0021
@@ -4653,6 +4661,7 @@ int layout sp_example 0x7f0d0070
 int layout ssp_example 0x7f0d0071
 int layout support_simple_spinner_dropdown_item 0x7f0d0072
 int layout user_list_items 0x7f0d0073
+int layout vocabulary_items 0x7f0d0075
 int mipmap ic_launcher 0x7f0f0000
 int mipmap ic_launcher_round 0x7f0f0001
 int plurals mtrl_badge_content_description 0x7f100000
