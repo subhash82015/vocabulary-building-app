@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
-
 import com.app.vocabulary.databinding.ActivityDashboardBinding;
 import com.app.vocabulary.models.AddFavorite;
 import com.app.vocabulary.room.AppApplication;
@@ -31,7 +31,6 @@ import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -55,13 +54,14 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
 
     Long id, isBookmarks, isToday, favorite_id = 0L;
 
+    TextToSpeech t1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         init();
-
     }
 
     private void init() {
@@ -79,6 +79,25 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
         binding.tvFullName.setText("Hi, " + sharedPreferenceUtil.getUserDetails(Constants.FULL_NAME));
         binding.tvEmail.setText(sharedPreferenceUtil.getUserDetails(Constants.EMAIL));
         binding.btnMobile.setText("Mobile No. " + sharedPreferenceUtil.getUserDetails(Constants.MOBILE));
+
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
+
+        binding.ivSpeak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String toSpeak = word;
+                //  Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+                t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+
     }
 
     private void clickHandle() {
