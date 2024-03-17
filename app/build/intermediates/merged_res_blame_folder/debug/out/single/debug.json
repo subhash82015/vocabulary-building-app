@@ -120,6 +120,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\logo.png"
     },
     {
+        "merged": "com.app.vocabulary.app-merged_res-49:/drawable_baseline_campaign_24.xml.flat",
+        "source": "com.app.vocabulary.app-main-51:/drawable/baseline_campaign_24.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_thin.ttf.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_thin.ttf"
     },

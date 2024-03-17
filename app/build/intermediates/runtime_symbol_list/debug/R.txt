@@ -3747,6 +3747,7 @@ int drawable avd_hide_password 0x7f080078
 int drawable avd_show_password 0x7f080079
 int drawable baseline_bus_alert_24 0x7f08007a
 int drawable baseline_calendar_month_24 0x7f08007b
+int drawable baseline_campaign_24 0x7f08010b
 int drawable baseline_delete_24 0x7f08007c
 int drawable baseline_feedback_24 0x7f08007d
 int drawable baseline_logout_24 0x7f08007e
@@ -4162,6 +4163,7 @@ int id ivDelete 0x7f0a00f9
 int id ivIcon 0x7f0a00fa
 int id ivLogo 0x7f0a00fb
 int id ivNotification 0x7f0a00fc
+int id ivSpeak 0x7f0a0228
 int id jumpToEnd 0x7f0a00fd
 int id jumpToStart 0x7f0a00fe
 int id labeled 0x7f0a00ff

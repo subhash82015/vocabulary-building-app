@@ -3748,6 +3748,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_bus_alert_24
 drawable baseline_calendar_month_24
+drawable baseline_campaign_24
 drawable baseline_delete_24
 drawable baseline_feedback_24
 drawable baseline_logout_24
@@ -4163,6 +4164,7 @@ id ivDelete
 id ivIcon
 id ivLogo
 id ivNotification
+id ivSpeak
 id jumpToEnd
 id jumpToStart
 id labeled
