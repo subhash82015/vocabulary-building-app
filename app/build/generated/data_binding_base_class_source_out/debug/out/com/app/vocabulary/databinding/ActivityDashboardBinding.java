@@ -34,6 +34,9 @@ public final class ActivityDashboardBinding implements ViewBinding {
   public final TextView btnOption;
 
   @NonNull
+  public final CardView cvAdd;
+
+  @NonNull
   public final CardView cvCard;
 
   @NonNull
@@ -46,6 +49,9 @@ public final class ActivityDashboardBinding implements ViewBinding {
   public final ImageView imgShare;
 
   @NonNull
+  public final ImageView ivAdd;
+
+  @NonNull
   public final ImageView ivIcon;
 
   @NonNull
@@ -55,10 +61,16 @@ public final class ActivityDashboardBinding implements ViewBinding {
   public final ImageView ivSpeak;
 
   @NonNull
+  public final LinearLayout llAddNotification;
+
+  @NonNull
   public final LinearLayout llNoRecord;
 
   @NonNull
   public final LinearLayout llTop;
+
+  @NonNull
+  public final LinearLayout llTop2;
 
   @NonNull
   public final TextView tvAntonyms;
@@ -89,27 +101,32 @@ public final class ActivityDashboardBinding implements ViewBinding {
 
   private ActivityDashboardBinding(@NonNull NestedScrollView rootView,
       @NonNull AppCompatButton btnFavorite, @NonNull AppCompatButton btnMobile,
-      @NonNull TextView btnOption, @NonNull CardView cvCard, @NonNull CardView cvFavorite,
-      @NonNull CardView cvOfflinePast, @NonNull ImageView imgShare, @NonNull ImageView ivIcon,
-      @NonNull ImageView ivNotification, @NonNull ImageView ivSpeak,
-      @NonNull LinearLayout llNoRecord, @NonNull LinearLayout llTop, @NonNull TextView tvAntonyms,
-      @NonNull TextView tvDescription, @NonNull AppCompatTextView tvEmail,
-      @NonNull TextView tvFavoriteCount, @NonNull AppCompatTextView tvFullName,
-      @NonNull TextView tvNoWords, @NonNull TextView tvOfflineCount, @NonNull TextView tvSynonyms,
-      @NonNull TextView tvWord) {
+      @NonNull TextView btnOption, @NonNull CardView cvAdd, @NonNull CardView cvCard,
+      @NonNull CardView cvFavorite, @NonNull CardView cvOfflinePast, @NonNull ImageView imgShare,
+      @NonNull ImageView ivAdd, @NonNull ImageView ivIcon, @NonNull ImageView ivNotification,
+      @NonNull ImageView ivSpeak, @NonNull LinearLayout llAddNotification,
+      @NonNull LinearLayout llNoRecord, @NonNull LinearLayout llTop, @NonNull LinearLayout llTop2,
+      @NonNull TextView tvAntonyms, @NonNull TextView tvDescription,
+      @NonNull AppCompatTextView tvEmail, @NonNull TextView tvFavoriteCount,
+      @NonNull AppCompatTextView tvFullName, @NonNull TextView tvNoWords,
+      @NonNull TextView tvOfflineCount, @NonNull TextView tvSynonyms, @NonNull TextView tvWord) {
     this.rootView = rootView;
     this.btnFavorite = btnFavorite;
     this.btnMobile = btnMobile;
     this.btnOption = btnOption;
+    this.cvAdd = cvAdd;
     this.cvCard = cvCard;
     this.cvFavorite = cvFavorite;
     this.cvOfflinePast = cvOfflinePast;
     this.imgShare = imgShare;
+    this.ivAdd = ivAdd;
     this.ivIcon = ivIcon;
     this.ivNotification = ivNotification;
     this.ivSpeak = ivSpeak;
+    this.llAddNotification = llAddNotification;
     this.llNoRecord = llNoRecord;
     this.llTop = llTop;
+    this.llTop2 = llTop2;
     this.tvAntonyms = tvAntonyms;
     this.tvDescription = tvDescription;
     this.tvEmail = tvEmail;
@@ -166,6 +183,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cvAdd;
+      CardView cvAdd = ViewBindings.findChildViewById(rootView, id);
+      if (cvAdd == null) {
+        break missingId;
+      }
+
       id = R.id.cvCard;
       CardView cvCard = ViewBindings.findChildViewById(rootView, id);
       if (cvCard == null) {
@@ -190,6 +213,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.ivAdd;
+      ImageView ivAdd = ViewBindings.findChildViewById(rootView, id);
+      if (ivAdd == null) {
+        break missingId;
+      }
+
       id = R.id.ivIcon;
       ImageView ivIcon = ViewBindings.findChildViewById(rootView, id);
       if (ivIcon == null) {
@@ -208,6 +237,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.llAddNotification;
+      LinearLayout llAddNotification = ViewBindings.findChildViewById(rootView, id);
+      if (llAddNotification == null) {
+        break missingId;
+      }
+
       id = R.id.llNoRecord;
       LinearLayout llNoRecord = ViewBindings.findChildViewById(rootView, id);
       if (llNoRecord == null) {
@@ -217,6 +252,12 @@ public final class ActivityDashboardBinding implements ViewBinding {
       id = R.id.llTop;
       LinearLayout llTop = ViewBindings.findChildViewById(rootView, id);
       if (llTop == null) {
+        break missingId;
+      }
+
+      id = R.id.llTop2;
+      LinearLayout llTop2 = ViewBindings.findChildViewById(rootView, id);
+      if (llTop2 == null) {
         break missingId;
       }
 
@@ -275,9 +316,10 @@ public final class ActivityDashboardBinding implements ViewBinding {
       }
 
       return new ActivityDashboardBinding((NestedScrollView) rootView, btnFavorite, btnMobile,
-          btnOption, cvCard, cvFavorite, cvOfflinePast, imgShare, ivIcon, ivNotification, ivSpeak,
-          llNoRecord, llTop, tvAntonyms, tvDescription, tvEmail, tvFavoriteCount, tvFullName,
-          tvNoWords, tvOfflineCount, tvSynonyms, tvWord);
+          btnOption, cvAdd, cvCard, cvFavorite, cvOfflinePast, imgShare, ivAdd, ivIcon,
+          ivNotification, ivSpeak, llAddNotification, llNoRecord, llTop, llTop2, tvAntonyms,
+          tvDescription, tvEmail, tvFavoriteCount, tvFullName, tvNoWords, tvOfflineCount,
+          tvSynonyms, tvWord);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
