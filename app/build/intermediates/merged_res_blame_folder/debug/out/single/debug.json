@@ -4,12 +4,12 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\progress_dialoge_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_black_italic.ttf.flat",
-        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_black_italic.ttf"
-    },
-    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_bold.ttf.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_black_italic.ttf.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_black_italic.ttf"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_favorites.png.flat",
@@ -120,8 +120,8 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\logo.png"
     },
     {
-        "merged": "com.app.vocabulary.app-merged_res-49:/drawable_baseline_campaign_24.xml.flat",
-        "source": "com.app.vocabulary.app-main-51:/drawable/baseline_campaign_24.xml"
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\layout_activity_add_vocabulary.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\activity_add_vocabulary.xml"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins_thin.ttf.flat",
@@ -188,6 +188,10 @@
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins_medium_italic.ttf"
     },
     {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_baseline_campaign_24.xml.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\baseline_campaign_24.xml"
+    },
+    {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\font_poppins__thin_italic.ttf.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\font\\poppins__thin_italic.ttf"
     },
@@ -226,6 +230,10 @@
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\layout_notifications_list_items.xml.flat",
         "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\layout\\notifications_list_items.xml"
+    },
+    {
+        "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\drawable_add_word.png.flat",
+        "source": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-main-51:\\drawable\\add_word.png"
     },
     {
         "merged": "C:\\Users\\lenovo\\.gradle\\daemon\\7.5\\com.app.vocabulary.app-merged_res-49:\\mipmap-hdpi_ic_launcher_round.webp.flat",

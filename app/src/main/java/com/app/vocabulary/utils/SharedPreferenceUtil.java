@@ -46,6 +46,10 @@ public class SharedPreferenceUtil {
         editor.putLong(Constants.USERID, value).apply();
     }
 
+    public Long getUserTYPE() {
+        return sharedPreferences.getLong(Constants.USER_TYPE, Constants.DEFAULT);
+    }
+
     public void setUserType(Long value) {
         editor.putLong(Constants.USER_TYPE, value).apply();
     }

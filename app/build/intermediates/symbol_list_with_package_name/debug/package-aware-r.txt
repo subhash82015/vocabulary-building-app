@@ -3744,6 +3744,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add_word
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_bus_alert_24
@@ -4010,6 +4011,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAdd
 id btnAddUser
 id btnFavorite
 id btnLogin
@@ -4056,6 +4058,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id cvAdd
 id cvCard
 id cvFavorite
 id cvOfflinePast
@@ -4102,10 +4105,15 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id etAntonyms
+id etData
+id etDescription
 id etEmail
 id etFName
 id etMobile
 id etPassword
+id etSynonyms
+id etVocabulary
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -4160,6 +4168,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivAdd
 id ivDelete
 id ivIcon
 id ivLogo
@@ -4178,11 +4187,13 @@ id line3
 id linear
 id listMode
 id list_item
+id llAddNotification
 id llFeesAmount
 id llHead
 id llNoRecord
 id llNotificationItemLayout
 id llTop
+id llTop2
 id lnTop
 id m3_side_sheet
 id marquee
@@ -4577,6 +4588,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_add_vocabulary
 layout activity_dashboard
 layout activity_favorite
 layout activity_login

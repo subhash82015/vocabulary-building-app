@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddVocabularyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:text="Add Vocabulary Words"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_15sdp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llHead"
+                android:layout_margin="@dimen/_15sdp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20ssp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_marginTop="@dimen/_22ssp"
+                            android:layout_marginEnd="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_login"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etVocabulary"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2ssp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:hint="Vocabulary Word"
+                                    android:textColor="@color/black_light"
+                                    android:textColorHint="@color/black_light" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_marginTop="@dimen/_22ssp"
+                            android:layout_marginEnd="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_login"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etAntonyms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2ssp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:hint="Antonyms"
+                                    android:textColor="@color/black_light"
+                                    android:textColorHint="@color/black_light" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llFeesAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_marginTop="@dimen/_22ssp"
+                            android:layout_marginEnd="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_login"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etSynonyms"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2ssp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:hint="Synonyms"
+                                    android:textColor="@color/black_light"
+                                    android:textColorHint="@color/black_light" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_marginTop="@dimen/_22ssp"
+                            android:layout_marginEnd="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_login"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etData"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2ssp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:hint="Date"
+                                    android:enabled="false"
+                                    android:textColor="@color/black_light"
+                                    android:textColorHint="@color/black_light" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5ssp"
+                            android:layout_marginTop="@dimen/_22ssp"
+                            android:layout_marginEnd="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_login"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/_2ssp"
+                                    android:background="@null"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:hint="Description"
+                                    android:textColor="@color/black_light"
+                                    android:textColorHint="@color/black_light" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAdd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_20ssp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_border"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Add"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

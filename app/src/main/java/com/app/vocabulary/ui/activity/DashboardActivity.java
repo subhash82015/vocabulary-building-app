@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
+
 import com.app.vocabulary.databinding.ActivityDashboardBinding;
 import com.app.vocabulary.models.AddFavorite;
 import com.app.vocabulary.room.AppApplication;
@@ -31,6 +32,7 @@ import com.google.firebase.firestore.ListenerRegistration;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -80,6 +82,12 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
         binding.tvEmail.setText(sharedPreferenceUtil.getUserDetails(Constants.EMAIL));
         binding.btnMobile.setText("Mobile No. " + sharedPreferenceUtil.getUserDetails(Constants.MOBILE));
 
+        if (sharedPreferenceUtil.getUserTYPE()==1) {
+            binding.llAddNotification.setVisibility(View.VISIBLE);
+        } else {
+            binding.llAddNotification.setVisibility(View.GONE);
+        }
+
         t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -124,6 +132,16 @@ public class DashboardActivity extends AppCompatActivity implements AsyncRespons
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardActivity.this, FavoriteActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+
+            }
+        });
+
+        binding.cvAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, AddVocabularyActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
 

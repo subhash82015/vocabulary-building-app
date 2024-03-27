@@ -48,6 +48,9 @@
         android:theme="@style/Theme.Vocabulary"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.app.vocabulary.ui.activity.AddVocabularyActivity"
+            android:exported="false" />
+        <activity
             android:name="com.app.vocabulary.ui.activity.FavoriteActivity"
             android:exported="false" />
         <activity
