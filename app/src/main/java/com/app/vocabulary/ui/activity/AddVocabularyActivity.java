@@ -3,8 +3,10 @@ package com.app.vocabulary.ui.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 
 import com.app.vocabulary.R;
 import com.app.vocabulary.databinding.ActivityAddVocabularyBinding;
@@ -30,6 +32,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 public class AddVocabularyActivity extends AppCompatActivity {
@@ -42,6 +45,8 @@ public class AddVocabularyActivity extends AppCompatActivity {
     Date c;
     String todayDate;
     SimpleDateFormat simpleDateFormat;
+    Calendar myCalendar;
+
 
     String vocabulary = "", antonyms = "", synonyms = "", date = "", description = "";
 
@@ -61,7 +66,7 @@ public class AddVocabularyActivity extends AppCompatActivity {
         c= Calendar.getInstance().getTime();
         simpleDateFormat=new SimpleDateFormat("dd-MM-yyyy");
         todayDate=simpleDateFormat.format(c);
-        binding.etData.setText(todayDate);
+        binding.etDate.setText(todayDate);
         handleClickListener();
     }
 
@@ -72,12 +77,41 @@ public class AddVocabularyActivity extends AppCompatActivity {
                 vocabulary = binding.etVocabulary.getText().toString().trim();
                 antonyms = binding.etAntonyms.getText().toString().trim();
                 synonyms = binding.etSynonyms.getText().toString().trim();
-                date = binding.etData.getText().toString().trim();
+                date = binding.etDate.getText().toString().trim();
                 description = binding.etDescription.getText().toString().trim();
                 validate();
             }
         });
+        binding.etDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myCalendar = Calendar.getInstance();
+                DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
 
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                          int dayOfMonth) {
+                        // TODO Auto-generated method stub
+                        myCalendar.set(Calendar.YEAR, year);
+                        myCalendar.set(Calendar.MONTH, monthOfYear);
+                        myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                        updateLabel();
+                    }
+
+                };
+                new DatePickerDialog(AddVocabularyActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+    }
+
+    private void updateLabel() {
+        String myFormat = "dd-MM-yyyy";//"dd-MMM-yyyy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+       // date= sdf.format(myCalendar.getTime());
+        binding.etDate.setText(sdf.format(myCalendar.getTime()));
     }
 
     private void validate() {
